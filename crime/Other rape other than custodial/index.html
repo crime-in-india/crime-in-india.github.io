@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--Bootstrap styles-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <!--Google font Lato-->
+    <link href='//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Crime in India</title>
+  </head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!--Navbar for mobile screens-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <!--Main navbar-->
+      <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li id="home" class="nav-item"><a href="/">Home</a></li>
+          <li id="stories" class="nav-item"><a href="/stories" target="_blank">Stories</a></li>
+          <li id="cities" class="nav-item"><a href="/city-list" target="_blank">Cities</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="about-nav" class="nav-item"><a href="/about" target="_blank">About</a></li>
+          <li id="references" class="nav-item"><a href="/references" target="_blank">References</a></li>
+          <li id="crimes" class="nav-item"><a href="/data" target="_blank">Data</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="main-header">
+        <h1 class="text-center">Other rape other than custodial</h1>
+      </div>
+    </div>
+
+    <p class="desc">These are the top 10 cities with the highest Other rape other than custodial rate.</p>
+    <div id="main-chart"></div>
+    
+    <div class="table-responsive">
+      <h3 class="text-center">Other rape other than custodial rates in all cities</h3>
+      <table class="table table-condensed table-striped table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center">City</th>
+            <th class="text-right">2010</th>
+            <th class="text-right">2011</th>
+            <th class="text-right">2012</th>
+            <th class="text-right">2013</th>
+            <th class="text-right">2014</th>
+            <th class="text-right">Average</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Agra">Agra</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">4.5</td>
+            <td class="text-right">4.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ahmedabad">Ahmedabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.3</td>
+            <td class="text-right">3.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Allahabad">Allahabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.2</td>
+            <td class="text-right">3.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Amritsar">Amritsar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">5.8</td>
+            <td class="text-right">5.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Asansol">Asansol</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.7</td>
+            <td class="text-right">2.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Aurangabad">Aurangabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">4.4</td>
+            <td class="text-right">4.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Bengaluru">Bengaluru</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.4</td>
+            <td class="text-right">2.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Bhopal">Bhopal</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">17.1</td>
+            <td class="text-right">17.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Chandigarh">Chandigarh</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">11.0</td>
+            <td class="text-right">11.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Chennai">Chennai</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">1.5</td>
+            <td class="text-right">1.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Coimbatore">Coimbatore</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">0.5</td>
+            <td class="text-right">0.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Delhi">Delhi</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">22.3</td>
+            <td class="text-right">22.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Dhanbad">Dhanbad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.1</td>
+            <td class="text-right">2.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Durg-Bhilainagar">Durg-Bhilainagar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">10.2</td>
+            <td class="text-right">10.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Faridabad">Faridabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">13.5</td>
+            <td class="text-right">13.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ghaziabad">Ghaziabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">6.4</td>
+            <td class="text-right">6.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Gwalior">Gwalior</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">18.7</td>
+            <td class="text-right">18.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Hyderabad">Hyderabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.3</td>
+            <td class="text-right">3.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/India">India</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">5.7</td>
+            <td class="text-right">5.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Indore">Indore</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">16.8</td>
+            <td class="text-right">16.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jabalpur">Jabalpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">18.4</td>
+            <td class="text-right">18.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jaipur">Jaipur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">17.4</td>
+            <td class="text-right">17.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jamshedpur">Jamshedpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">5.6</td>
+            <td class="text-right">5.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jodhpur">Jodhpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">12.5</td>
+            <td class="text-right">12.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kannur">Kannur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">1.9</td>
+            <td class="text-right">1.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kanpur">Kanpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">1.3</td>
+            <td class="text-right">1.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kochi">Kochi</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">6.0</td>
+            <td class="text-right">6.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kolkata">Kolkata</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kollam">Kollam</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">13.4</td>
+            <td class="text-right">13.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kota">Kota</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">20.6</td>
+            <td class="text-right">20.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kozhikode">Kozhikode</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.3</td>
+            <td class="text-right">3.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Lucknow">Lucknow</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.6</td>
+            <td class="text-right">3.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ludhiana">Ludhiana</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">14.7</td>
+            <td class="text-right">14.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Madurai">Madurai</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">0.8</td>
+            <td class="text-right">0.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Malappuram">Malappuram</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">1.1</td>
+            <td class="text-right">1.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Meerut">Meerut</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.7</td>
+            <td class="text-right">3.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Mumbai">Mumbai</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">6.9</td>
+            <td class="text-right">6.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Nagpur">Nagpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">8.9</td>
+            <td class="text-right">8.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Nasik">Nasik</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.5</td>
+            <td class="text-right">3.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Patna">Patna</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">5.5</td>
+            <td class="text-right">5.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Pune">Pune</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">7.8</td>
+            <td class="text-right">7.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Raipur">Raipur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">15.4</td>
+            <td class="text-right">15.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Rajkot">Rajkot</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.4</td>
+            <td class="text-right">2.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ranchi">Ranchi</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">7.6</td>
+            <td class="text-right">7.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Srinagar">Srinagar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.0</td>
+            <td class="text-right">2.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Surat">Surat</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">4.6</td>
+            <td class="text-right">4.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Thiruvananthapuram">Thiruvananthapuram</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">6.3</td>
+            <td class="text-right">6.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Thrissur">Thrissur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.9</td>
+            <td class="text-right">3.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Tiruchirappalli">Tiruchirappalli</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">0.6</td>
+            <td class="text-right">0.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vadodara">Vadodara</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">2.6</td>
+            <td class="text-right">2.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Varanasi">Varanasi</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">4.0</td>
+            <td class="text-right">4.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vasai-Virar">Vasai-Virar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">10.3</td>
+            <td class="text-right">10.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vijayawada">Vijayawada</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">8.6</td>
+            <td class="text-right">8.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vishakhapatnam">Vishakhapatnam</a></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">9.8</td>
+            <td class="text-right">9.8</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <script src="/static/d3/d3.min.js"></script> -->
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/highcharts.js"></script>
+
+  <script type="text/javascript">
+    var crimeData = [{"2010": "", "2011": "", "2012": "", "2013": "", "2014": "4.5", "avg": "4.5", "city": "Agra", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.3", "avg": "3.3", "city": "Ahmedabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.2", "avg": "3.2", "city": "Allahabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.8", "avg": "5.8", "city": "Amritsar", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.7", "avg": "2.7", "city": "Asansol", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "4.4", "avg": "4.4", "city": "Aurangabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.4", "avg": "2.4", "city": "Bengaluru", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "17.1", "avg": "17.1", "city": "Bhopal", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "11.0", "avg": "11.0", "city": "Chandigarh", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.5", "avg": "1.5", "city": "Chennai", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.5", "avg": "0.5", "city": "Coimbatore", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "22.3", "avg": "22.3", "city": "Delhi", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.1", "avg": "2.1", "city": "Dhanbad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "10.2", "avg": "10.2", "city": "Durg-Bhilainagar", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "13.5", "avg": "13.5", "city": "Faridabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.4", "avg": "6.4", "city": "Ghaziabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "18.7", "avg": "18.7", "city": "Gwalior", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.3", "avg": "3.3", "city": "Hyderabad", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.7", "avg": "5.7", "city": "India", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "16.8", "avg": "16.8", "city": "Indore", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "18.4", "avg": "18.4", "city": "Jabalpur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "17.4", "avg": "17.4", "city": "Jaipur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.6", "avg": "5.6", "city": "Jamshedpur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "12.5", "avg": "12.5", "city": "Jodhpur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.9", "avg": "1.9", "city": "Kannur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.3", "avg": "1.3", "city": "Kanpur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.0", "avg": "6.0", "city": "Kochi", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.4", "avg": "0.4", "city": "Kolkata", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "13.4", "avg": "13.4", "city": "Kollam", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "20.6", "avg": "20.6", "city": "Kota", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.3", "avg": "3.3", "city": "Kozhikode", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.6", "avg": "3.6", "city": "Lucknow", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "14.7", "avg": "14.7", "city": "Ludhiana", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.8", "avg": "0.8", "city": "Madurai", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.1", "avg": "1.1", "city": "Malappuram", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.7", "avg": "3.7", "city": "Meerut", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.9", "avg": "6.9", "city": "Mumbai", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.9", "avg": "8.9", "city": "Nagpur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.5", "avg": "3.5", "city": "Nasik", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.5", "avg": "5.5", "city": "Patna", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "7.8", "avg": "7.8", "city": "Pune", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "15.4", "avg": "15.4", "city": "Raipur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.4", "avg": "2.4", "city": "Rajkot", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "7.6", "avg": "7.6", "city": "Ranchi", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.0", "avg": "2.0", "city": "Srinagar", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "4.6", "avg": "4.6", "city": "Surat", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.3", "avg": "6.3", "city": "Thiruvananthapuram", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.9", "avg": "3.9", "city": "Thrissur", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.6", "avg": "0.6", "city": "Tiruchirappalli", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.6", "avg": "2.6", "city": "Vadodara", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "4.0", "avg": "4.0", "city": "Varanasi", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "10.3", "avg": "10.3", "city": "Vasai-Virar", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.6", "avg": "8.6", "city": "Vijayawada", "crime_name": "Other rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "9.8", "avg": "9.8", "city": "Vishakhapatnam", "crime_name": "Other rape other than custodial"}];
+
+    drawCrime(crimeData);
+
+
+    /* -----------------------------------------------------
+    ----------------- DRAW CRIME --------------------------
+    ------------------------------------------------------*/
+
+    function drawCrime(crimeData) {
+      var categs = [],
+          data = [];
+
+      var crimeData = crimeData.sort(function(a,b) {
+        return +b.avg - +a.avg;
+      });
+
+      var natAvg = crimeData.filter(function(d) {
+        return d.city === "India" 
+      });
+
+      // Get the top 10 cities and build data to display on chart
+      crimeData = crimeData.slice(0,10);
+      crimeData.forEach(function(d) {
+        categs.push(d.city);
+        data.push(+d.avg);
+      });
+
+      $(function () {
+        $('#main-chart').highcharts({
+          chart: {
+                type: 'column'
+            },
+          title: {
+              text: "Cities with highest crime rates",
+              x: -20 //center
+          },
+          xAxis: {
+              categories: categs
+          },
+          yAxis: {
+              title: {
+                  text: 'Crimes per 100,000 people'
+              },
+              plotLines: [{
+                  value: +natAvg[0].avg,
+                  color: 'green',
+                  dashStyle: 'shortdash',
+                  width: 2,
+                  label: {
+                      text: 'National average: ' + natAvg[0].avg,
+                      rotation: -90,
+                      y: -5,
+                      x: 10
+                  }
+              }]
+          },
+          tooltip: {
+              valueSuffix: ' crimes per 100,000'
+          },
+          credits: {
+            enabled: false
+          },
+          legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+          },
+          plotOptions: {
+              column: {
+                dataLabels: {
+                    enabled: true
+                }
+              }
+            },
+          series: [{
+            name: 'Other rape other than custodial',
+            data: data
+          }]
+        });
+      });
+
+    }
+  
+  </script>
+  <footer>
+  <div class="container text-center">
+    <p class="text-muted">
+      Made by Saurabh Datar
+      <br>
+      Icons courtesy <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/">parkjisun from The Noun Project</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

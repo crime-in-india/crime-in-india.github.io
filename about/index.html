@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--Bootstrap styles-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <!--Google font Lato-->
+    <link href='//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Crime in India</title>
+  </head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!--Navbar for mobile screens-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <!--Main navbar-->
+      <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li id="home" class="nav-item"><a href="/">Home</a></li>
+          <li id="stories" class="nav-item"><a href="/stories" target="_blank">Stories</a></li>
+          <li id="cities" class="nav-item"><a href="/city-list" target="_blank">Cities</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="about-nav" class="nav-item"><a href="/about" target="_blank">About</a></li>
+          <li id="references" class="nav-item"><a href="/references" target="_blank">References</a></li>
+          <li id="crimes" class="nav-item"><a href="/data" target="_blank">Data</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="main-header">
+        <h1 class="text-center">About the project</h1>
+      </div>
+    </div>
+
+    <h3>Why this project?</h3>
+    <p class="desc">Accessing India's crime data has always been painful. The <a href="http://ncrb.gov.in">National Crime Records Bureau</a> releases a report more than 600 pages long, detailing the different kinds of crimes recorded in the country. Below is a screenshot from the latest report i.e. 2014.</p>
+
+    <img class="img-responsive screenshot" src="/static/assets/table2.jpg">
+
+    <p class="desc">This report goes on for hundreds of pages with different tables. Every year, journalists, social scientists, academics and anybody else interested in this data spend hours ploughing through these dense PDF documents to analyze the data.</p>    
+
+    <p class="desc">And if you want to compare crimes across cities and different years, all you can do is download the PDFs for each year and keep switching screens.</p>
+
+    <h3>How does this website help?</h3>
+    <p class="desc">This application frees the data trapped in these PDFs, so that you can easily <span class="highlight">compare crimes in different cities and across different years</span>. You can choose a city and know which crimes are affecting its people the most. Or you can choose a crime and know which cities have the highest rates of that particular crime.</p>
+    
+    <p class="desc">We've made it easy for you to discern trends and patterns from the five latest available data sets for crimes in India i.e. 2010 to 2014. You don't have to download any PDF documents or convert them into spreadsheets.</p>    
+
+    <h3>The data</h3>
+    <p class="desc">The data comes from India's <a href="http://ncrb.gov.in">National Crime Records Bureau</a>, which releases a compiled report of crimes recorded by police stations all around the country. The app has data from 2010 to 2014 i.e. the five latest years of data available. The latest report can be found <a href="http://ncrb.gov.in/StatPublications/CII/CII2014/cii2014.asp" target="_blank">here</a>. Reports from the previous years can be found <a href="http://ncrb.gov.in/StatPublications/CII/PrevPublications.htm" target="_blank">here</a>.</p>
+
+    <p class="desc">There are some assumptions and modifications to the data that are necessary to point out.</p>
+    <ul class="about">
+      <li class="about">
+        <p><strong>Cities and average crime rate</strong>: The Bureau didn't report crimes for 18 cities in 2010. These cities were added in consequent years. While calculating average for such cities (Chandigarh, for instance), the average is for over a four-year period (2011 - 2014). This, we believe, is still a better choice than to consider 0 as the crime rate for 2010, since that would present a drastically skewed picture.</p>
+      </li>
+
+      <li class="about">
+        <p><strong>Categories</strong>: The Bureau categorizes crimes as 'violent', 'crimes against women', 'property crime', 'economic crime', and so on. We have followed the same nomenclature. You can see their categorization <a href="http://ncrb.gov.in/StatPublications/CII/CII2014/Table_Contents.htm" target="_blank">here<sup>[pdf]</sup></a>.
+        </p>
+        <p>Furthermore, in order to make navigation of data easier and the analysis more lucid, we have restricted ourselves to displaying a smaller subset of all the crimes recorded in the original data. These include the most serious crimes in each category and provide a fair insight into the criminal makeup of each city:</p>
+      </li>
+      
+      <li class="about">
+        <p><strong>Crime rates</strong>: From 2010 to 2012, the Bureau recorded rate of crimes against women using the total population. In no way does this reflect the true picture. Hence, we did our own calculations of crime rates for all crimes against women using the <a href="http://www.censusindia.gov.in/2011-prov-results/paper2-vol2/data_files/India2/Table_3_PR_UA_Citiees_1Lakh_and_Above.xls" target="_blank">2011 Census provisional population totals<sup>[xls]</sup></a>.</p>
+      </li>
+
+      <li class="about">
+        <p><strong>New category</strong>:
+          We have also added a new category for crimes against women: <span class="highlight">'Sexual harassment and molestation of women' </span>. This is because of the lack of consistency in the way the Bureau reports sexual crimes against women that are not rape i.e. Section 354 and Section 509. In 2010 and 2011, crimes recorded under these sections were reported as 'Molestation' and 'Sexual harassment' respectively. The following years, they were reported as 'Assault on women with intent to outrage modesty' and 'Insult to the modesty of women'.
+        </p>  
+
+        <p>
+          We first standardized the nomenclature across all years. Section 354 crimes were named 'Assault on women with intent to outrage modesty' and Section 509 crimes were placed under the 'Insult to the modesty of women' head.
+        </p>
+
+        <p>
+          We then added our new category <span class="highlight">'Sexual harassment and molestation of women' </span> by adding the number of incidences for crimes under the aforementioned two sections. We then calculated the crime rate for this new composite category using the  2011 Census population numbers.
+        </p>
+
+        <p><strong>Why do this?</strong> Combining the two sections provides a simpler way of understanding the rates of sexual harassment and molestation women face. These are not crimes as severe as rape. However, these crimes make life for women much more difficult since they experience them on a regular basis in their everyday lives.
+        </p>
+      </li>
+
+      <li class="about">
+        <p><strong>Hurt</strong>: Until 2013, the Bureau recorded assault crimes i.e. crimes for injuring people through various means under the 'Hurt' category. These were crimes recorded under Sections 323-333, 335-338, all of them dealing with causing bodily harm to people. However, in 2014, the Bureau started reporting crimes under the head of 'Grievous Hurt', with sub-categories that included crimes like acid attack, attempt to acid attack, etc. We have reported these crimes under the 'Hurt' category for 2014. The sub-sections also appear on the app, but we have mainly considered the overall 'Hurt' crimes for our reporting.</p>
+      </li>
+      
+      <li class="about"> Here is a list of crimes we have chosen to display:
+        <p><strong>Violent Crimes</strong>: Attempt to commit murder, Culpable homicide not amounting to murder, kidnapping &amp; abduction, murder, and riots</p>
+
+        <p><strong>Crimes Against Women</strong>: Cruelty by husband or his relatives, dowry deaths, rape, and sexual harassment and molestation of women</p>
+
+        <p><strong>Property crimes</strong>: Arson, auto theft, burglary, dacoity, Other theft, and robbery</p>
+
+        <p><strong>Economic crimes</strong>: Cheating, criminal breach of trust, counterfeiting and forgery</p>
+      </li>
+    </ul>
+
+    <h3>Credits</h3>
+    <p class="desc">This application was built by <a href="http://ssdatar.github.io" target="_blank">Saurabh Datar</a> as part of his thesis project for the <a href="http://journalism.stanford.edu/" target="_blank">Stanford Journalism</a> program. It would not have been possible without the guidance of <a href="https://stanford.edu/~dun/" target="_blank">Dan Nguyen</a> and all other professors at the Department of Communication at Stanford University.</p>
+
+    <p class="desc">The icons used on the home page have been designed by <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/" target="_blank">parkjisun from The Noun Project</a>.</p>
+
+    <p class="desc">The map of India is courtesy <a href="https://github.com/datameet/maps/tree/master/States" target="_blank">Datameet</a>. It was converted to a TopoJSON using <a href="http://mapshaper.org/" target="_blank">mapshaper</a>.</p>
+
+    <h3>Technical details</h3>
+    <p class="desc">Since the data came in PDFs, ABBYY FineReader (courtesy <a href="https://stanford.edu/~dun/" target="_blank">Dan Nguyen</a>) was used to convert them into spreadsheet format. The data cleaning was done in Python, with the occasional use of <a href="http://pandas.pydata.org/" target="_blank">Pandas</a> for wrangling and pivot tables.</p>
+    <p class="desc">The app itself is powered by Python's <a href="http://flask.pocoo.org/" target="_blank">Flask framework</a>. The website mainly uses <a href="http://www.getbootstrap.com" target="_blank">Bootstrap</a> for styling and responsive design. The visualizations are powered by <a href="http://www.highcharts.com/" target="_blank">Highcharts</a>. The map on the front page is made in <a href="https://d3js.org" target="_blank">D3</a>.</p>    
+    
+  </div>
+
+  <footer>
+  <div class="container text-center">
+    <p class="text-muted">
+      Made by Saurabh Datar
+      <br>
+      Icons courtesy <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/">parkjisun from The Noun Project</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

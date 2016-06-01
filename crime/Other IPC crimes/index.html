@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--Bootstrap styles-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <!--Google font Lato-->
+    <link href='//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Crime in India</title>
+  </head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!--Navbar for mobile screens-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <!--Main navbar-->
+      <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li id="home" class="nav-item"><a href="/">Home</a></li>
+          <li id="stories" class="nav-item"><a href="/stories" target="_blank">Stories</a></li>
+          <li id="cities" class="nav-item"><a href="/city-list" target="_blank">Cities</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="about-nav" class="nav-item"><a href="/about" target="_blank">About</a></li>
+          <li id="references" class="nav-item"><a href="/references" target="_blank">References</a></li>
+          <li id="crimes" class="nav-item"><a href="/data" target="_blank">Data</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="main-header">
+        <h1 class="text-center">Other IPC crimes</h1>
+      </div>
+    </div>
+
+    <p class="desc">These are the top 10 cities with the highest Other IPC crimes rate.</p>
+    <div id="main-chart"></div>
+    
+    <div class="table-responsive">
+      <h3 class="text-center">Other IPC crimes rates in all cities</h3>
+      <table class="table table-condensed table-striped table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center">City</th>
+            <th class="text-right">2010</th>
+            <th class="text-right">2011</th>
+            <th class="text-right">2012</th>
+            <th class="text-right">2013</th>
+            <th class="text-right">2014</th>
+            <th class="text-right">Average</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Agra">Agra</a></td>
+            <td class="text-right">83.3</td>
+            <td class="text-right">111.2</td>
+            <td class="text-right">71.5</td>
+            <td class="text-right">79.8</td>
+            <td class="text-right">44.6</td>
+            <td class="text-right">78.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ahmedabad">Ahmedabad</a></td>
+            <td class="text-right">247.5</td>
+            <td class="text-right">163.7</td>
+            <td class="text-right">190.7</td>
+            <td class="text-right">181.7</td>
+            <td class="text-right">117.3</td>
+            <td class="text-right">180.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Allahabad">Allahabad</a></td>
+            <td class="text-right">15.0</td>
+            <td class="text-right">40.0</td>
+            <td class="text-right">76.7</td>
+            <td class="text-right">121.6</td>
+            <td class="text-right">127.0</td>
+            <td class="text-right">76.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Amritsar">Amritsar</a></td>
+            <td class="text-right">60.8</td>
+            <td class="text-right">41.0</td>
+            <td class="text-right">43.9</td>
+            <td class="text-right">36.8</td>
+            <td class="text-right">39.4</td>
+            <td class="text-right">44.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Asansol">Asansol</a></td>
+            <td class="text-right">66.0</td>
+            <td class="text-right">114.8</td>
+            <td class="text-right">141.5</td>
+            <td class="text-right">179.6</td>
+            <td class="text-right">153.3</td>
+            <td class="text-right">131.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Aurangabad">Aurangabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">75.4</td>
+            <td class="text-right">71.2</td>
+            <td class="text-right">60.2</td>
+            <td class="text-right">71.6</td>
+            <td class="text-right">69.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Bengaluru">Bengaluru</a></td>
+            <td class="text-right">181.7</td>
+            <td class="text-right">97.6</td>
+            <td class="text-right">90.2</td>
+            <td class="text-right">93.8</td>
+            <td class="text-right">62.1</td>
+            <td class="text-right">105.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Bhopal">Bhopal</a></td>
+            <td class="text-right">418.6</td>
+            <td class="text-right">394.1</td>
+            <td class="text-right">312.7</td>
+            <td class="text-right">348.5</td>
+            <td class="text-right">227.6</td>
+            <td class="text-right">340.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Chandigarh">Chandigarh</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">95.1</td>
+            <td class="text-right">96.2</td>
+            <td class="text-right">109.3</td>
+            <td class="text-right">44.4</td>
+            <td class="text-right">86.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Chennai">Chennai</a></td>
+            <td class="text-right">97.2</td>
+            <td class="text-right">143.3</td>
+            <td class="text-right">139.5</td>
+            <td class="text-right">130.1</td>
+            <td class="text-right">36.8</td>
+            <td class="text-right">109.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Coimbatore">Coimbatore</a></td>
+            <td class="text-right">128.7</td>
+            <td class="text-right">88.2</td>
+            <td class="text-right">397.3</td>
+            <td class="text-right">760.9</td>
+            <td class="text-right">71.4</td>
+            <td class="text-right">289.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Delhi">Delhi</a></td>
+            <td class="text-right">95.1</td>
+            <td class="text-right">74.7</td>
+            <td class="text-right">81.1</td>
+            <td class="text-right">119.2</td>
+            <td class="text-right">117.8</td>
+            <td class="text-right">97.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Dhanbad">Dhanbad</a></td>
+            <td class="text-right">14.3</td>
+            <td class="text-right">55.4</td>
+            <td class="text-right">72.2</td>
+            <td class="text-right">78.0</td>
+            <td class="text-right">72.6</td>
+            <td class="text-right">58.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Durg-Bhilainagar">Durg-Bhilainagar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">460.4</td>
+            <td class="text-right">395.2</td>
+            <td class="text-right">338.8</td>
+            <td class="text-right">229.5</td>
+            <td class="text-right">356.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Faridabad">Faridabad</a></td>
+            <td class="text-right">124.8</td>
+            <td class="text-right">111.7</td>
+            <td class="text-right">101.6</td>
+            <td class="text-right">108.8</td>
+            <td class="text-right">121.6</td>
+            <td class="text-right">113.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ghaziabad">Ghaziabad</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">57.6</td>
+            <td class="text-right">70.8</td>
+            <td class="text-right">91.7</td>
+            <td class="text-right">71.2</td>
+            <td class="text-right">72.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Gwalior">Gwalior</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">307.6</td>
+            <td class="text-right">305.2</td>
+            <td class="text-right">342.1</td>
+            <td class="text-right">377.2</td>
+            <td class="text-right">333.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Hyderabad">Hyderabad</a></td>
+            <td class="text-right">52.0</td>
+            <td class="text-right">30.4</td>
+            <td class="text-right">37.8</td>
+            <td class="text-right">36.6</td>
+            <td class="text-right">72.1</td>
+            <td class="text-right">45.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/India">India</a></td>
+            <td class="text-right">77.9</td>
+            <td class="text-right">79.8</td>
+            <td class="text-right">79.6</td>
+            <td class="text-right">88.9</td>
+            <td class="text-right">75.8</td>
+            <td class="text-right">80.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Indore">Indore</a></td>
+            <td class="text-right">347.7</td>
+            <td class="text-right">292.9</td>
+            <td class="text-right">403.8</td>
+            <td class="text-right">367.9</td>
+            <td class="text-right">245.6</td>
+            <td class="text-right">331.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jabalpur">Jabalpur</a></td>
+            <td class="text-right">322.6</td>
+            <td class="text-right">180.9</td>
+            <td class="text-right">246.3</td>
+            <td class="text-right">198.9</td>
+            <td class="text-right">301.0</td>
+            <td class="text-right">249.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jaipur">Jaipur</a></td>
+            <td class="text-right">211.1</td>
+            <td class="text-right">214.6</td>
+            <td class="text-right">199.8</td>
+            <td class="text-right">228.1</td>
+            <td class="text-right">199.5</td>
+            <td class="text-right">210.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jamshedpur">Jamshedpur</a></td>
+            <td class="text-right">64.8</td>
+            <td class="text-right">34.3</td>
+            <td class="text-right">73.3</td>
+            <td class="text-right">82.6</td>
+            <td class="text-right">80.9</td>
+            <td class="text-right">67.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Jodhpur">Jodhpur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">82.7</td>
+            <td class="text-right">87.6</td>
+            <td class="text-right">113.6</td>
+            <td class="text-right">139.0</td>
+            <td class="text-right">105.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kannur">Kannur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">75.2</td>
+            <td class="text-right">90.3</td>
+            <td class="text-right">65.6</td>
+            <td class="text-right">40.9</td>
+            <td class="text-right">68.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kanpur">Kanpur</a></td>
+            <td class="text-right">74.4</td>
+            <td class="text-right">86.2</td>
+            <td class="text-right">56.7</td>
+            <td class="text-right">67.8</td>
+            <td class="text-right">48.8</td>
+            <td class="text-right">66.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kochi">Kochi</a></td>
+            <td class="text-right">1788.0</td>
+            <td class="text-right">1534.5</td>
+            <td class="text-right">711.6</td>
+            <td class="text-right">532.2</td>
+            <td class="text-right">72.2</td>
+            <td class="text-right">927.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kolkata">Kolkata</a></td>
+            <td class="text-right">52.1</td>
+            <td class="text-right">50.4</td>
+            <td class="text-right">77.3</td>
+            <td class="text-right">84.1</td>
+            <td class="text-right">73.0</td>
+            <td class="text-right">67.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kollam">Kollam</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">319.5</td>
+            <td class="text-right">409.5</td>
+            <td class="text-right">456.8</td>
+            <td class="text-right">536.4</td>
+            <td class="text-right">430.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kota">Kota</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">166.3</td>
+            <td class="text-right">151.9</td>
+            <td class="text-right">177.2</td>
+            <td class="text-right">132.5</td>
+            <td class="text-right">157.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Kozhikode">Kozhikode</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">87.2</td>
+            <td class="text-right">111.8</td>
+            <td class="text-right">105.2</td>
+            <td class="text-right">51.9</td>
+            <td class="text-right">89.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Lucknow">Lucknow</a></td>
+            <td class="text-right">185.4</td>
+            <td class="text-right">129.1</td>
+            <td class="text-right">124.2</td>
+            <td class="text-right">175.8</td>
+            <td class="text-right">194.0</td>
+            <td class="text-right">161.7</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ludhiana">Ludhiana</a></td>
+            <td class="text-right">75.9</td>
+            <td class="text-right">56.8</td>
+            <td class="text-right">63.3</td>
+            <td class="text-right">63.5</td>
+            <td class="text-right">60.9</td>
+            <td class="text-right">64.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Madurai">Madurai</a></td>
+            <td class="text-right">116.0</td>
+            <td class="text-right">100.3</td>
+            <td class="text-right">112.1</td>
+            <td class="text-right">102.9</td>
+            <td class="text-right">79.0</td>
+            <td class="text-right">102.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Malappuram">Malappuram</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">97.6</td>
+            <td class="text-right">84.0</td>
+            <td class="text-right">78.9</td>
+            <td class="text-right">22.6</td>
+            <td class="text-right">70.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Meerut">Meerut</a></td>
+            <td class="text-right">53.1</td>
+            <td class="text-right">78.8</td>
+            <td class="text-right">79.8</td>
+            <td class="text-right">101.4</td>
+            <td class="text-right">56.8</td>
+            <td class="text-right">74.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Mumbai">Mumbai</a></td>
+            <td class="text-right">43.3</td>
+            <td class="text-right">35.1</td>
+            <td class="text-right">34.9</td>
+            <td class="text-right">39.8</td>
+            <td class="text-right">49.6</td>
+            <td class="text-right">40.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Nagpur">Nagpur</a></td>
+            <td class="text-right">130.9</td>
+            <td class="text-right">102.6</td>
+            <td class="text-right">84.9</td>
+            <td class="text-right">87.3</td>
+            <td class="text-right">93.6</td>
+            <td class="text-right">99.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Nasik">Nasik</a></td>
+            <td class="text-right">60.2</td>
+            <td class="text-right">39.9</td>
+            <td class="text-right">113.2</td>
+            <td class="text-right">125.0</td>
+            <td class="text-right">59.5</td>
+            <td class="text-right">79.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Patna">Patna</a></td>
+            <td class="text-right">294.8</td>
+            <td class="text-right">197.7</td>
+            <td class="text-right">86.1</td>
+            <td class="text-right">321.3</td>
+            <td class="text-right">246.7</td>
+            <td class="text-right">229.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Pune">Pune</a></td>
+            <td class="text-right">89.4</td>
+            <td class="text-right">45.9</td>
+            <td class="text-right">47.4</td>
+            <td class="text-right">47.9</td>
+            <td class="text-right">40.9</td>
+            <td class="text-right">54.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Raipur">Raipur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">172.8</td>
+            <td class="text-right">173.1</td>
+            <td class="text-right">164.5</td>
+            <td class="text-right">164.6</td>
+            <td class="text-right">168.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Rajkot">Rajkot</a></td>
+            <td class="text-right">159.1</td>
+            <td class="text-right">121.6</td>
+            <td class="text-right">138.7</td>
+            <td class="text-right">92.3</td>
+            <td class="text-right">58.0</td>
+            <td class="text-right">113.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Ranchi">Ranchi</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">80.8</td>
+            <td class="text-right">69.5</td>
+            <td class="text-right">91.8</td>
+            <td class="text-right">61.0</td>
+            <td class="text-right">75.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Srinagar">Srinagar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">82.6</td>
+            <td class="text-right">94.0</td>
+            <td class="text-right">99.3</td>
+            <td class="text-right">62.4</td>
+            <td class="text-right">84.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Surat">Surat</a></td>
+            <td class="text-right">128.9</td>
+            <td class="text-right">98.9</td>
+            <td class="text-right">118.0</td>
+            <td class="text-right">443.0</td>
+            <td class="text-right">2.5</td>
+            <td class="text-right">158.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Thiruvananthapuram">Thiruvananthapuram</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">204.6</td>
+            <td class="text-right">239.2</td>
+            <td class="text-right">426.9</td>
+            <td class="text-right">100.3</td>
+            <td class="text-right">242.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Thrissur">Thrissur</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">157.0</td>
+            <td class="text-right">238.1</td>
+            <td class="text-right">262.0</td>
+            <td class="text-right">103.4</td>
+            <td class="text-right">190.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Tiruchirappalli">Tiruchirappalli</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">172.6</td>
+            <td class="text-right">196.9</td>
+            <td class="text-right">191.6</td>
+            <td class="text-right">173.4</td>
+            <td class="text-right">183.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vadodara">Vadodara</a></td>
+            <td class="text-right">164.1</td>
+            <td class="text-right">148.4</td>
+            <td class="text-right">184.6</td>
+            <td class="text-right">519.2</td>
+            <td class="text-right">362.8</td>
+            <td class="text-right">275.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Varanasi">Varanasi</a></td>
+            <td class="text-right">54.8</td>
+            <td class="text-right">50.1</td>
+            <td class="text-right">43.1</td>
+            <td class="text-right">64.1</td>
+            <td class="text-right">50.7</td>
+            <td class="text-right">52.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vasai-Virar">Vasai-Virar</a></td>
+            <td class="text-right"></td>
+            <td class="text-right">15.6</td>
+            <td class="text-right">13.8</td>
+            <td class="text-right">16.5</td>
+            <td class="text-right">27.4</td>
+            <td class="text-right">18.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vijayawada">Vijayawada</a></td>
+            <td class="text-right">60.0</td>
+            <td class="text-right">54.2</td>
+            <td class="text-right">72.7</td>
+            <td class="text-right">91.1</td>
+            <td class="text-right">123.1</td>
+            <td class="text-right">80.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/cities/Vishakhapatnam">Vishakhapatnam</a></td>
+            <td class="text-right">114.1</td>
+            <td class="text-right">33.4</td>
+            <td class="text-right">34.7</td>
+            <td class="text-right">116.1</td>
+            <td class="text-right">127.3</td>
+            <td class="text-right">85.1</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <script src="/static/d3/d3.min.js"></script> -->
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/highcharts.js"></script>
+
+  <script type="text/javascript">
+    var crimeData = [{"2010": "83.3", "2011": "111.2", "2012": "71.5", "2013": "79.8", "2014": "44.6", "avg": "78.1", "city": "Agra", "crime_name": "Other IPC crimes"}, {"2010": "247.5", "2011": "163.7", "2012": "190.7", "2013": "181.7", "2014": "117.3", "avg": "180.2", "city": "Ahmedabad", "crime_name": "Other IPC crimes"}, {"2010": "15.0", "2011": "40.0", "2012": "76.7", "2013": "121.6", "2014": "127.0", "avg": "76.1", "city": "Allahabad", "crime_name": "Other IPC crimes"}, {"2010": "60.8", "2011": "41.0", "2012": "43.9", "2013": "36.8", "2014": "39.4", "avg": "44.4", "city": "Amritsar", "crime_name": "Other IPC crimes"}, {"2010": "66.0", "2011": "114.8", "2012": "141.5", "2013": "179.6", "2014": "153.3", "avg": "131.0", "city": "Asansol", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "75.4", "2012": "71.2", "2013": "60.2", "2014": "71.6", "avg": "69.6", "city": "Aurangabad", "crime_name": "Other IPC crimes"}, {"2010": "181.7", "2011": "97.6", "2012": "90.2", "2013": "93.8", "2014": "62.1", "avg": "105.1", "city": "Bengaluru", "crime_name": "Other IPC crimes"}, {"2010": "418.6", "2011": "394.1", "2012": "312.7", "2013": "348.5", "2014": "227.6", "avg": "340.3", "city": "Bhopal", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "95.1", "2012": "96.2", "2013": "109.3", "2014": "44.4", "avg": "86.2", "city": "Chandigarh", "crime_name": "Other IPC crimes"}, {"2010": "97.2", "2011": "143.3", "2012": "139.5", "2013": "130.1", "2014": "36.8", "avg": "109.4", "city": "Chennai", "crime_name": "Other IPC crimes"}, {"2010": "128.7", "2011": "88.2", "2012": "397.3", "2013": "760.9", "2014": "71.4", "avg": "289.3", "city": "Coimbatore", "crime_name": "Other IPC crimes"}, {"2010": "95.1", "2011": "74.7", "2012": "81.1", "2013": "119.2", "2014": "117.8", "avg": "97.6", "city": "Delhi", "crime_name": "Other IPC crimes"}, {"2010": "14.3", "2011": "55.4", "2012": "72.2", "2013": "78.0", "2014": "72.6", "avg": "58.5", "city": "Dhanbad", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "460.4", "2012": "395.2", "2013": "338.8", "2014": "229.5", "avg": "356.0", "city": "Durg-Bhilainagar", "crime_name": "Other IPC crimes"}, {"2010": "124.8", "2011": "111.7", "2012": "101.6", "2013": "108.8", "2014": "121.6", "avg": "113.7", "city": "Faridabad", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "57.6", "2012": "70.8", "2013": "91.7", "2014": "71.2", "avg": "72.8", "city": "Ghaziabad", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "307.6", "2012": "305.2", "2013": "342.1", "2014": "377.2", "avg": "333.0", "city": "Gwalior", "crime_name": "Other IPC crimes"}, {"2010": "52.0", "2011": "30.4", "2012": "37.8", "2013": "36.6", "2014": "72.1", "avg": "45.8", "city": "Hyderabad", "crime_name": "Other IPC crimes"}, {"2010": "77.9", "2011": "79.8", "2012": "79.6", "2013": "88.9", "2014": "75.8", "avg": "80.4", "city": "India", "crime_name": "Other IPC crimes"}, {"2010": "347.7", "2011": "292.9", "2012": "403.8", "2013": "367.9", "2014": "245.6", "avg": "331.6", "city": "Indore", "crime_name": "Other IPC crimes"}, {"2010": "322.6", "2011": "180.9", "2012": "246.3", "2013": "198.9", "2014": "301.0", "avg": "249.9", "city": "Jabalpur", "crime_name": "Other IPC crimes"}, {"2010": "211.1", "2011": "214.6", "2012": "199.8", "2013": "228.1", "2014": "199.5", "avg": "210.6", "city": "Jaipur", "crime_name": "Other IPC crimes"}, {"2010": "64.8", "2011": "34.3", "2012": "73.3", "2013": "82.6", "2014": "80.9", "avg": "67.2", "city": "Jamshedpur", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "82.7", "2012": "87.6", "2013": "113.6", "2014": "139.0", "avg": "105.7", "city": "Jodhpur", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "75.2", "2012": "90.3", "2013": "65.6", "2014": "40.9", "avg": "68.0", "city": "Kannur", "crime_name": "Other IPC crimes"}, {"2010": "74.4", "2011": "86.2", "2012": "56.7", "2013": "67.8", "2014": "48.8", "avg": "66.8", "city": "Kanpur", "crime_name": "Other IPC crimes"}, {"2010": "1788.0", "2011": "1534.5", "2012": "711.6", "2013": "532.2", "2014": "72.2", "avg": "927.7", "city": "Kochi", "crime_name": "Other IPC crimes"}, {"2010": "52.1", "2011": "50.4", "2012": "77.3", "2013": "84.1", "2014": "73.0", "avg": "67.4", "city": "Kolkata", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "319.5", "2012": "409.5", "2013": "456.8", "2014": "536.4", "avg": "430.6", "city": "Kollam", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "166.3", "2012": "151.9", "2013": "177.2", "2014": "132.5", "avg": "157.0", "city": "Kota", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "87.2", "2012": "111.8", "2013": "105.2", "2014": "51.9", "avg": "89.0", "city": "Kozhikode", "crime_name": "Other IPC crimes"}, {"2010": "185.4", "2011": "129.1", "2012": "124.2", "2013": "175.8", "2014": "194.0", "avg": "161.7", "city": "Lucknow", "crime_name": "Other IPC crimes"}, {"2010": "75.9", "2011": "56.8", "2012": "63.3", "2013": "63.5", "2014": "60.9", "avg": "64.1", "city": "Ludhiana", "crime_name": "Other IPC crimes"}, {"2010": "116.0", "2011": "100.3", "2012": "112.1", "2013": "102.9", "2014": "79.0", "avg": "102.1", "city": "Madurai", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "97.6", "2012": "84.0", "2013": "78.9", "2014": "22.6", "avg": "70.8", "city": "Malappuram", "crime_name": "Other IPC crimes"}, {"2010": "53.1", "2011": "78.8", "2012": "79.8", "2013": "101.4", "2014": "56.8", "avg": "74.0", "city": "Meerut", "crime_name": "Other IPC crimes"}, {"2010": "43.3", "2011": "35.1", "2012": "34.9", "2013": "39.8", "2014": "49.6", "avg": "40.5", "city": "Mumbai", "crime_name": "Other IPC crimes"}, {"2010": "130.9", "2011": "102.6", "2012": "84.9", "2013": "87.3", "2014": "93.6", "avg": "99.9", "city": "Nagpur", "crime_name": "Other IPC crimes"}, {"2010": "60.2", "2011": "39.9", "2012": "113.2", "2013": "125.0", "2014": "59.5", "avg": "79.6", "city": "Nasik", "crime_name": "Other IPC crimes"}, {"2010": "294.8", "2011": "197.7", "2012": "86.1", "2013": "321.3", "2014": "246.7", "avg": "229.3", "city": "Patna", "crime_name": "Other IPC crimes"}, {"2010": "89.4", "2011": "45.9", "2012": "47.4", "2013": "47.9", "2014": "40.9", "avg": "54.3", "city": "Pune", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "172.8", "2012": "173.1", "2013": "164.5", "2014": "164.6", "avg": "168.8", "city": "Raipur", "crime_name": "Other IPC crimes"}, {"2010": "159.1", "2011": "121.6", "2012": "138.7", "2013": "92.3", "2014": "58.0", "avg": "113.9", "city": "Rajkot", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "80.8", "2012": "69.5", "2013": "91.8", "2014": "61.0", "avg": "75.8", "city": "Ranchi", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "82.6", "2012": "94.0", "2013": "99.3", "2014": "62.4", "avg": "84.6", "city": "Srinagar", "crime_name": "Other IPC crimes"}, {"2010": "128.9", "2011": "98.9", "2012": "118.0", "2013": "443.0", "2014": "2.5", "avg": "158.3", "city": "Surat", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "204.6", "2012": "239.2", "2013": "426.9", "2014": "100.3", "avg": "242.8", "city": "Thiruvananthapuram", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "157.0", "2012": "238.1", "2013": "262.0", "2014": "103.4", "avg": "190.1", "city": "Thrissur", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "172.6", "2012": "196.9", "2013": "191.6", "2014": "173.4", "avg": "183.6", "city": "Tiruchirappalli", "crime_name": "Other IPC crimes"}, {"2010": "164.1", "2011": "148.4", "2012": "184.6", "2013": "519.2", "2014": "362.8", "avg": "275.8", "city": "Vadodara", "crime_name": "Other IPC crimes"}, {"2010": "54.8", "2011": "50.1", "2012": "43.1", "2013": "64.1", "2014": "50.7", "avg": "52.6", "city": "Varanasi", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "15.6", "2012": "13.8", "2013": "16.5", "2014": "27.4", "avg": "18.3", "city": "Vasai-Virar", "crime_name": "Other IPC crimes"}, {"2010": "60.0", "2011": "54.2", "2012": "72.7", "2013": "91.1", "2014": "123.1", "avg": "80.2", "city": "Vijayawada", "crime_name": "Other IPC crimes"}, {"2010": "114.1", "2011": "33.4", "2012": "34.7", "2013": "116.1", "2014": "127.3", "avg": "85.1", "city": "Vishakhapatnam", "crime_name": "Other IPC crimes"}];
+
+    drawCrime(crimeData);
+
+
+    /* -----------------------------------------------------
+    ----------------- DRAW CRIME --------------------------
+    ------------------------------------------------------*/
+
+    function drawCrime(crimeData) {
+      var categs = [],
+          data = [];
+
+      var crimeData = crimeData.sort(function(a,b) {
+        return +b.avg - +a.avg;
+      });
+
+      var natAvg = crimeData.filter(function(d) {
+        return d.city === "India" 
+      });
+
+      // Get the top 10 cities and build data to display on chart
+      crimeData = crimeData.slice(0,10);
+      crimeData.forEach(function(d) {
+        categs.push(d.city);
+        data.push(+d.avg);
+      });
+
+      $(function () {
+        $('#main-chart').highcharts({
+          chart: {
+                type: 'column'
+            },
+          title: {
+              text: "Cities with highest crime rates",
+              x: -20 //center
+          },
+          xAxis: {
+              categories: categs
+          },
+          yAxis: {
+              title: {
+                  text: 'Crimes per 100,000 people'
+              },
+              plotLines: [{
+                  value: +natAvg[0].avg,
+                  color: 'green',
+                  dashStyle: 'shortdash',
+                  width: 2,
+                  label: {
+                      text: 'National average: ' + natAvg[0].avg,
+                      rotation: -90,
+                      y: -5,
+                      x: 10
+                  }
+              }]
+          },
+          tooltip: {
+              valueSuffix: ' crimes per 100,000'
+          },
+          credits: {
+            enabled: false
+          },
+          legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+          },
+          plotOptions: {
+              column: {
+                dataLabels: {
+                    enabled: true
+                }
+              }
+            },
+          series: [{
+            name: 'Other IPC crimes',
+            data: data
+          }]
+        });
+      });
+
+    }
+  
+  </script>
+  <footer>
+  <div class="container text-center">
+    <p class="text-muted">
+      Made by Saurabh Datar
+      <br>
+      Icons courtesy <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/">parkjisun from The Noun Project</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

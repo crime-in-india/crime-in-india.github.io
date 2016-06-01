@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--Bootstrap styles-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <!--Google font Lato-->
+    <link href='//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Crime in India</title>
+  </head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!--Navbar for mobile screens-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <!--Main navbar-->
+      <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li id="home" class="nav-item"><a href="/">Home</a></li>
+          <li id="stories" class="nav-item"><a href="/stories" target="_blank">Stories</a></li>
+          <li id="cities" class="nav-item"><a href="/city-list" target="_blank">Cities</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="about-nav" class="nav-item"><a href="/about" target="_blank">About</a></li>
+          <li id="references" class="nav-item"><a href="/references" target="_blank">References</a></li>
+          <li id="crimes" class="nav-item"><a href="/data" target="_blank">Data</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>  
+  
+  <!--Main content-->
+  <div class="container">
+
+    <div id="header">
+      <h1 class="text-center">Crime in India</h1>
+      <h3 class="text-center">Opening up India's crime data</h3>
+    </div>
+
+    <section id="map-section">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <p class="intro-text text-justify"> Crime data in India has always been buried in long PDF documents that are difficult to read and analyze. <span class="highlight">Crime in India</span> makes India's crime records more meaningful and easy to use. With five years' worth of the most updated data from the National Crime Records Bureau &mdash; 2010 to 2014 &mdash; you can now access information that governs your lives.</p>
+        </div>
+      </div>
+
+      <div id="big-wrapper">
+        <p class="big-text text-justify">Know your city and its crime history. Track different kinds of crimes.</p>
+        
+        <p class="text-center">Click on a city on the map or choose from the menu. Choose <a href="#scroll-point"> crime categories</a>. Or read <a href="/stories/"> our stories</a>.</p>
+      </div>
+      
+      <form id="user-location">  
+        <select name="/city/" class="form-control" id="city-name">
+          <option value="Agra">Agra</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Allahabad">Allahabad</option>
+          <option value="Amritsar">Amritsar</option>
+          <option value="Asansol">Asansol</option>
+          <option value="Aurangabad">Aurangabad</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Dhanbad">Dhanbad</option>
+          <option value="Durg-Bhilainagar">Durg-Bhilainagar</option>
+          <option value="Faridabad">Faridabad</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+          <option value="Gwalior">Gwalior</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Indore">Indore</option>
+          <option value="Jabalpur">Jabalpur</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Jamshedpur">Jamshedpur</option>
+          <option value="Jodhpur">Jodhpur</option>
+          <option value="Kannur">Kannur</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Kochi">Kochi</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Kota">Kota</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Ludhiana">Ludhiana</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Malappuram">Malappuram</option>
+          <option value="Meerut">Meerut</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Nasik">Nasik</option>
+          <option value="Patna">Patna</option>
+          <option value="Pune">Pune</option>
+          <option value="Raipur">Raipur</option>
+          <option value="Rajkot">Rajkot</option>
+          <option value="Ranchi">Ranchi</option>
+          <option value="Srinagar">Srinagar</option>
+          <option value="Surat">Surat</option>
+          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="Thrissur">Thrissur</option>
+          <option value="Tiruchirappalli">Tiruchirappalli</option>
+          <option value="Vadodara">Vadodara</option>
+          <option value="Varanasi">Varanasi</option>
+          <option value="Vasai-Virar">Vasai-Virar</option>
+          <option value="Vijayawada">Vijayawada</option>
+          <option value="Vishakhapatnam">Vishakhapatnam</option>
+        </select>
+        <input type="submit" id="city-button" class="btn btn-primary" value="Show me" />
+      </form>  
+            
+      <div class="row">
+        <div class="col-md-offset-2">
+          <div id="map"></div>
+        </div>
+      </div>    
+
+    </section>
+    
+    <section id="crime-section">
+      
+      <div id="main-header">
+        <h2 class="head" id="scroll-point">Crimes</h2>
+        <p class="explainer">Choose a category of crime</p>
+        <p class="desc" id="crime-select">'Violent crimes' include crimes like murder, attempt to commit murder, riots. 'Crimes against women' include rape, sexual harassment and molestation, dowry deaths. Burglary, arson, car thefts are among those classified as 'property crimes'. Economic crimes include, among others, cheating and forgery.</p>
+      </div>
+
+      <div class="row">
+        <a href="/violent-crimes">
+          <div class="col-md-3 col-sm-6 col-xs-6">        
+            <div class="crime-box">
+              <h3 class="crime-categ">Violent Crimes</h3>
+              <img class="img-responsive crime-logo" src="/static/assets/violent.png"/>
+            </div>     
+          </div>
+        </a>  
+        
+        <a href="/women-crimes">
+          <div class="col-md-3 col-sm-6 col-xs-6">        
+            <div class="crime-box">
+              <h3 class="crime-categ">Crimes Against Women</h3>
+              <img class="img-responsive crime-logo" src="/static/assets/women.png"/>
+            </div>     
+          </div>
+        </a> 
+
+        <a href="/property-crimes">  
+          <div class="col-md-3 col-sm-6 col-xs-6">        
+            <div class="crime-box">
+              <h3 class="crime-categ">Property Crimes</h3>
+              <img class="img-responsive crime-logo" src="/static/assets/property.png"/>
+            </div>     
+          </div>
+        </a>  
+
+        <a href="/economic-crimes">  
+          <div class="col-md-3 col-sm-6 col-xs-6">        
+            <div class="crime-box">
+              <h3 class="crime-categ">Economic Crimes</h3>
+              <img class="img-responsive crime-logo" src="/static/assets/economic.png"/>
+            </div>     
+          </div>
+        </a> 
+      </div>
+    </section>
+
+    <section id="list-section">
+      <div class="row">
+
+        <h2 class="head">Crime rates in cities</h2>
+        <p class="desc">Here are the top five cities with the highest average crime rates in different crime categories. The average has been calculated using crime rates from 2010 to 2014. You can <a href="/city-list">click here to see the entire list of cities</a>.</p>
+        
+        
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Overall crimes</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Kochi">Kochi</a>
+                <p class="list-sub">1159.0 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Indore">Indore</a>
+                <p class="list-sub">799.2 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Gwalior">Gwalior</a>
+                <p class="list-sub">740.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Jaipur">Jaipur</a>
+                <p class="list-sub">714.2 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Kollam">Kollam</a>
+                <p class="list-sub">689.1 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Murder</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Patna">Patna</a>
+                <p class="list-sub">8.9 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Ranchi">Ranchi</a>
+                <p class="list-sub">5.7 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Meerut">Meerut</a>
+                <p class="list-sub">5.2 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Faridabad">Faridabad</a>
+                <p class="list-sub">5.0 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Gwalior">Gwalior</a>
+                <p class="list-sub">4.9 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Rape</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Gwalior">Gwalior</a>
+                <p class="list-sub">16.1 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Jabalpur">Jabalpur</a>
+                <p class="list-sub">15.2 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Kota">Kota</a>
+                <p class="list-sub">13.5 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Bhopal">Bhopal</a>
+                <p class="list-sub">13.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Durg-Bhilainagar">Durg-Bhilainagar</a>
+                <p class="list-sub">12.8 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Sexual harassment</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Vijayawada">Vijayawada</a>
+                <p class="list-sub">76.5 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Srinagar">Srinagar</a>
+                <p class="list-sub">47.9 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Gwalior">Gwalior</a>
+                <p class="list-sub">40.4 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Kollam">Kollam</a>
+                <p class="list-sub">40.4 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Durg-Bhilainagar">Durg-Bhilainagar</a>
+                <p class="list-sub">35.9 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Hurt</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Jabalpur">Jabalpur</a>
+                <p class="list-sub">123.1 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Raipur">Raipur</a>
+                <p class="list-sub">119.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Vijayawada">Vijayawada</a>
+                <p class="list-sub">108.5 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Vishakhapatnam">Vishakhapatnam</a>
+                <p class="list-sub">82.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Patna">Patna</a>
+                <p class="list-sub">74.2 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Robbery</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Nagpur">Nagpur</a>
+                <p class="list-sub">15.9 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Aurangabad">Aurangabad</a>
+                <p class="list-sub">14.8 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Pune">Pune</a>
+                <p class="list-sub">14.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Vasai-Virar">Vasai-Virar</a>
+                <p class="list-sub">12.8 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Gwalior">Gwalior</a>
+                <p class="list-sub">11.2 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Kidnapping</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Delhi">Delhi</a>
+                <p class="list-sub">34.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Indore">Indore</a>
+                <p class="list-sub">17.1 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Raipur">Raipur</a>
+                <p class="list-sub">12.9 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Agra">Agra</a>
+                <p class="list-sub">11.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Durg-Bhilainagar">Durg-Bhilainagar</a>
+                <p class="list-sub">10.8 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Cheating</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Jaipur">Jaipur</a>
+                <p class="list-sub">118.3 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Kota">Kota</a>
+                <p class="list-sub">76.8 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Jodhpur">Jodhpur</a>
+                <p class="list-sub">61.5 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Bengaluru">Bengaluru</a>
+                <p class="list-sub">39.7 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Patna">Patna</a>
+                <p class="list-sub">32.3 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+         
+          <div class="col-md-4 col-sm-6 col-xs-6">
+            <h3 class="list-head">Deaths due to rash driving</h3>
+            <ul class="list">
+              
+              <li>
+                <a href="/cities/Jaipur">Jaipur</a>
+                <p class="list-sub">26.0 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Vijayawada">Vijayawada</a>
+                <p class="list-sub">20.9 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Jodhpur">Jodhpur</a>
+                <p class="list-sub">20.7 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Vishakhapatnam">Vishakhapatnam</a>
+                <p class="list-sub">20.4 per 100,000 people</p>
+              </li>
+              
+              <li>
+                <a href="/cities/Asansol">Asansol</a>
+                <p class="list-sub">17.0 per 100,000 people</p>
+              </li>
+              
+            </ul>  
+          </div>
+        
+
+        <!--/list-->
+
+      </div>
+      <!--./row-->
+      
+    </section>
+
+  </div>
+
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/collapse.js"></script>
+  <script src="/static/d3/d3.min.js"></script>
+  <!-- <script src="/static/d3/d3-queue.min.js"></script> -->
+  <script src="/static/d3/topojson.v1.js"></script>
+  <script src="/static/d3/d3-tip.js"></script>
+  <script src="/static/data/cities.js"></script>
+  <script src="/static/script.js"></script>
+
+  <footer>
+  <div class="container text-center">
+    <p class="text-muted">
+      Made by Saurabh Datar
+      <br>
+      Icons courtesy <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/">parkjisun from The Noun Project</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

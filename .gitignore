@@ -1,0 +1,5 @@
+.DS_Store
+creds_*
+__pycache__/
+*.py[cod]
+.python-version

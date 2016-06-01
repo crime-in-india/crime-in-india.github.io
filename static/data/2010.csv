@@ -1,0 +1,73 @@
+city,year,crime_name,incidences,rate
+Agra,2010,Assault on women with intent to outrage her modesty,54,6.7
+Agra,2010,Insult to the modesty of women,61,7.6
+Ahmedabad,2010,Assault on women with intent to outrage her modesty,73,2.4
+Ahmedabad,2010,Insult to the modesty of women,9,0.3
+Allahabad,2010,Assault on women with intent to outrage her modesty,9,1.6
+Allahabad,2010,Insult to the modesty of women,0,0
+Amritsar,2010,Assault on women with intent to outrage her modesty,10,1.8
+Amritsar,2010,Insult to the modesty of women,4,0.7
+Asansol,2010,Assault on women with intent to outrage her modesty,13,2.2
+Asansol,2010,Insult to the modesty of women,0,0
+Bengaluru,2010,Assault on women with intent to outrage her modesty,308,7.6
+Bengaluru,2010,Insult to the modesty of women,50,1.2
+Bhopal,2010,Assault on women with intent to outrage her modesty,21,2.3
+Bhopal,2010,Insult to the modesty of women,139,15.5
+Chennai,2010,Assault on women with intent to outrage her modesty,45,1
+Chennai,2010,Insult to the modesty of women,23,0.5
+Coimbatore,2010,Assault on women with intent to outrage her modesty,35,3.3
+Coimbatore,2010,Insult to the modesty of women,1,0.1
+Delhi,2010,Assault on women with intent to outrage her modesty,550,7.3
+Delhi,2010,Insult to the modesty of women,73,1
+Dhanbad,2010,Assault on women with intent to outrage her modesty,6,1.1
+Dhanbad,2010,Insult to the modesty of women,0,0
+Faridabad,2010,Assault on women with intent to outrage her modesty,27,4.1
+Faridabad,2010,Insult to the modesty of women,78,11.9
+Hyderabad,2010,Assault on women with intent to outrage her modesty,171,4.5
+Hyderabad,2010,Insult to the modesty of women,60,1.6
+India,2010,Assault on women with intent to outrage her modesty,40613,6.9
+India,2010,Insult to the modesty of women,9961,1.7
+Indore,2010,Assault on women with intent to outrage her modesty,211,20.3
+Indore,2010,Insult to the modesty of women,47,4.5
+Jabalpur,2010,Assault on women with intent to outrage her modesty,114,18.9
+Jabalpur,2010,Insult to the modesty of women,49,8.1
+Jaipur,2010,Assault on women with intent to outrage her modesty,115,7.9
+Jaipur,2010,Insult to the modesty of women,0,0
+Jamshedpur,2010,Assault on women with intent to outrage her modesty,6,0.9
+Jamshedpur,2010,Insult to the modesty of women,1,0.2
+Kanpur,2010,Assault on women with intent to outrage her modesty,118,8.8
+Kanpur,2010,Insult to the modesty of women,7,0.5
+Kochi,2010,Assault on women with intent to outrage her modesty,67,6.2
+Kochi,2010,Insult to the modesty of women,23,2.1
+Kolkata,2010,Assault on women with intent to outrage her modesty,226,3.3
+Kolkata,2010,Insult to the modesty of women,133,2
+Lucknow,2010,Assault on women with intent to outrage her modesty,97,7
+Lucknow,2010,Insult to the modesty of women,0,0
+Ludhiana,2010,Assault on women with intent to outrage her modesty,27,3.7
+Ludhiana,2010,Insult to the modesty of women,11,1.5
+Madurai,2010,Assault on women with intent to outrage her modesty,12,1.6
+Madurai,2010,Insult to the modesty of women,20,2.7
+Meerut,2010,Assault on women with intent to outrage her modesty,34,5.1
+Meerut,2010,Insult to the modesty of women,0,0
+Mumbai,2010,Assault on women with intent to outrage her modesty,475,5.6
+Mumbai,2010,Insult to the modesty of women,138,1.6
+Nagpur,2010,Assault on women with intent to outrage her modesty,87,7.1
+Nagpur,2010,Insult to the modesty of women,48,3.9
+Nasik,2010,Assault on women with intent to outrage her modesty,46,6.2
+Nasik,2010,Insult to the modesty of women,18,2.4
+Patna,2010,Assault on women with intent to outrage her modesty,4,0.4
+Patna,2010,Insult to the modesty of women,3,0.3
+Pune,2010,Assault on women with intent to outrage her modesty,78,3.3
+Pune,2010,Insult to the modesty of women,91,3.8
+Rajkot,2010,Assault on women with intent to outrage her modesty,14,2.1
+Rajkot,2010,Insult to the modesty of women,7,1.1
+Surat,2010,Assault on women with intent to outrage her modesty,24,1.2
+Surat,2010,Insult to the modesty of women,1,0.1
+Vadodara,2010,Assault on women with intent to outrage her modesty,18,2.1
+Vadodara,2010,Insult to the modesty of women,0,0
+Varanasi,2010,Assault on women with intent to outrage her modesty,3,0.4
+Varanasi,2010,Insult to the modesty of women,0,0
+Vijayawada,2010,Assault on women with intent to outrage her modesty,172,23.2
+Vijayawada,2010,Insult to the modesty of women,219,29.6
+Vishakhapatnam,2010,Assault on women with intent to outrage her modesty,59,6.9
+Vishakhapatnam,2010,Insult to the modesty of women,52,6.1

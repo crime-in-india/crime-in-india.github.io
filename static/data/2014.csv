@@ -1,0 +1,109 @@
+city,year,crime_name,incidences,rate
+Agra,2014,Assault on women with intent to outrage her modesty,207,25.7
+Agra,2014,Insult to the modesty of women,0,0
+Ahmedabad,2014,Assault on women with intent to outrage her modesty,162,5.4
+Ahmedabad,2014,Insult to the modesty of women,3,0.1
+Allahabad,2014,Assault on women with intent to outrage her modesty,96,17.1
+Allahabad,2014,Insult to the modesty of women,1,0.2
+Amritsar,2014,Assault on women with intent to outrage her modesty,45,8.1
+Amritsar,2014,Insult to the modesty of women,2,0.4
+Asansol,2014,Assault on women with intent to outrage her modesty,158,26.6
+Asansol,2014,Insult to the modesty of women,1,0.2
+Aurangabad,2014,Assault on women with intent to outrage her modesty,227,39.9
+Aurangabad,2014,Insult to the modesty of women,5,0.9
+Bengaluru,2014,Assault on women with intent to outrage her modesty,680,16.8
+Bengaluru,2014,Insult to the modesty of women,57,1.4
+Bhopal,2014,Assault on women with intent to outrage her modesty,289,32.2
+Bhopal,2014,Insult to the modesty of women,13,1.4
+Chandigarh,2014,Assault on women with intent to outrage her modesty,78,16.8
+Chandigarh,2014,Insult to the modesty of women,1,0.2
+Chennai,2014,Assault on women with intent to outrage her modesty,59,1.4
+Chennai,2014,Insult to the modesty of women,157,3.6
+Coimbatore,2014,Assault on women with intent to outrage her modesty,8,0.7
+Coimbatore,2014,Insult to the modesty of women,0,0
+Delhi,2014,Assault on women with intent to outrage her modesty,3810,50.3
+Delhi,2014,Insult to the modesty of women,1111,14.7
+Dhanbad,2014,Assault on women with intent to outrage her modesty,18,3.2
+Dhanbad,2014,Insult to the modesty of women,0,0
+Durg-Bhilainagar,2014,Assault on women with intent to outrage her modesty,194,37.5
+Durg-Bhilainagar,2014,Insult to the modesty of women,9,1.7
+Faridabad,2014,Assault on women with intent to outrage her modesty,94,14.4
+Faridabad,2014,Insult to the modesty of women,16,2.4
+Ghaziabad,2014,Assault on women with intent to outrage her modesty,168,15.2
+Ghaziabad,2014,Insult to the modesty of women,8,0.7
+Gwalior,2014,Assault on women with intent to outrage her modesty,272,53
+Gwalior,2014,Insult to the modesty of women,19,3.7
+Hyderabad,2014,Assault on women with intent to outrage her modesty,393,10.4
+Hyderabad,2014,Insult to the modesty of women,87,2.3
+India,2014,Assault on women with intent to outrage her modesty,82235,13.7
+India,2014,Insult to the modesty of women,8735,1.6
+Indore,2014,Assault on women with intent to outrage her modesty,301,29
+Indore,2014,Insult to the modesty of women,31,3
+Jabalpur,2014,Assault on women with intent to outrage her modesty,221,36.6
+Jabalpur,2014,Insult to the modesty of women,31,5.1
+Jaipur,2014,Assault on women with intent to outrage her modesty,455,31.3
+Jaipur,2014,Insult to the modesty of women,0,0
+Jamshedpur,2014,Assault on women with intent to outrage her modesty,30,4.7
+Jamshedpur,2014,Insult to the modesty of women,0,0
+Jodhpur,2014,Assault on women with intent to outrage her modesty,212,39.4
+Jodhpur,2014,Insult to the modesty of women,3,0.6
+Kannur,2014,Assault on women with intent to outrage her modesty,47,5.3
+Kannur,2014,Insult to the modesty of women,5,0.6
+Kanpur,2014,Assault on women with intent to outrage her modesty,129,9.7
+Kanpur,2014,Insult to the modesty of women,1,0.1
+Kochi,2014,Assault on women with intent to outrage her modesty,158,14.7
+Kochi,2014,Insult to the modesty of women,18,1.7
+Kolkata,2014,Assault on women with intent to outrage her modesty,577,8.5
+Kolkata,2014,Insult to the modesty of women,286,4.2
+Kollam,2014,Assault on women with intent to outrage her modesty,287,49.5
+Kollam,2014,Insult to the modesty of women,13,2.2
+Kota,2014,Assault on women with intent to outrage her modesty,102,21.6
+Kota,2014,Insult to the modesty of women,0,0
+Kozhikode,2014,Assault on women with intent to outrage her modesty,107,10.1
+Kozhikode,2014,Insult to the modesty of women,9,0.8
+Lucknow,2014,Assault on women with intent to outrage her modesty,229,16.6
+Lucknow,2014,Insult to the modesty of women,2,0.1
+Ludhiana,2014,Assault on women with intent to outrage her modesty,98,13.3
+Ludhiana,2014,Insult to the modesty of women,19,2.6
+Madurai,2014,Assault on women with intent to outrage her modesty,22,3
+Madurai,2014,Insult to the modesty of women,1,0.1
+Malappuram,2014,Assault on women with intent to outrage her modesty,75,8.4
+Malappuram,2014,Insult to the modesty of women,0,0
+Meerut,2014,Assault on women with intent to outrage her modesty,217,32.4
+Meerut,2014,Insult to the modesty of women,0,0
+Mumbai,2014,Assault on women with intent to outrage her modesty,1626,19.1
+Mumbai,2014,Insult to the modesty of women,363,4.3
+Nagpur,2014,Assault on women with intent to outrage her modesty,279,22.8
+Nagpur,2014,Insult to the modesty of women,25,2
+Nasik,2014,Assault on women with intent to outrage her modesty,101,13.7
+Nasik,2014,Insult to the modesty of women,3,0.4
+Patna,2014,Assault on women with intent to outrage her modesty,0,0
+Patna,2014,Insult to the modesty of women,56,5.8
+Pune,2014,Assault on women with intent to outrage her modesty,454,19
+Pune,2014,Insult to the modesty of women,98,4.1
+Raipur,2014,Assault on women with intent to outrage her modesty,120,22.1
+Raipur,2014,Insult to the modesty of women,3,0.6
+Rajkot,2014,Assault on women with intent to outrage her modesty,31,4.7
+Rajkot,2014,Insult to the modesty of women,5,0.8
+Ranchi,2014,Assault on women with intent to outrage her modesty,16,3
+Ranchi,2014,Insult to the modesty of women,8,1.5
+Srinagar,2014,Assault on women with intent to outrage her modesty,218,36.6
+Srinagar,2014,Insult to the modesty of women,44,7.4
+Surat,2014,Assault on women with intent to outrage her modesty,70,3.5
+Surat,2014,Insult to the modesty of women,0,0
+Thiruvananthapuram,2014,Assault on women with intent to outrage her modesty,254,29.1
+Thiruvananthapuram,2014,Insult to the modesty of women,15,1.7
+Thrissur,2014,Assault on women with intent to outrage her modesty,109,11.1
+Thrissur,2014,Insult to the modesty of women,11,1.1
+Tiruchirappalli,2014,Assault on women with intent to outrage her modesty,10,1.9
+Tiruchirappalli,2014,Insult to the modesty of women,3,0.6
+Vadodara,2014,Assault on women with intent to outrage her modesty,109,12.5
+Vadodara,2014,Insult to the modesty of women,8,0.9
+Varanasi,2014,Assault on women with intent to outrage her modesty,116,17.2
+Varanasi,2014,Insult to the modesty of women,3,0.4
+Vasai-Virar,2014,Assault on women with intent to outrage her modesty,113,19.8
+Vasai-Virar,2014,Insult to the modesty of women,16,2.8
+Vijayawada,2014,Assault on women with intent to outrage her modesty,279,37.7
+Vijayawada,2014,Insult to the modesty of women,212,28.6
+Vishakhapatnam,2014,Assault on women with intent to outrage her modesty,147,17.2
+Vishakhapatnam,2014,Insult to the modesty of women,112,13.1

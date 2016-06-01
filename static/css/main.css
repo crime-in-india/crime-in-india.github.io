@@ -1,0 +1,311 @@
+body {
+  font-family: 'Lato', helvetica, sans-serif;
+  margin: 0 auto;
+  padding-top: 65px;
+}
+
+footer {
+  padding: 1.2em;
+  margin-top: 1.5em;
+  background-color: #e7e7e7;
+}
+
+article {
+  padding: 4em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+article > p {
+  text-align: justify;
+}
+
+th {
+  color: darkred;
+}
+
+h2.head {
+  color: #990033;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  /*display: inline-block;*/
+  padding: .5em .5em .5em 0;
+  font-size: 1.5em;
+}
+
+li.about {
+  font-size: 1.2em;
+}
+
+ul.about {
+  list-style-type: circle;
+}
+
+span.highlight {
+  color: #990033;
+}
+
+.list li {
+  font-size: 1.5em;
+  padding: 0;
+}
+
+h3.list-head {
+  color: #990033;
+  margin-left: 1.5em;
+}
+
+p.list-sub {
+  color: #7e7e7e;
+  font-size: 0.8em;
+}
+
+p.intro {
+  font-size: 1.2em;
+  text-align: center;
+  color: #545454;
+}
+
+p.desc {
+  font-size: 1.2em;
+  color: #545454;
+}
+
+p.intro-text {
+  font-size: 1.5em;
+  color: #545454;
+}
+
+p.note {
+  font-size: 1em;
+  color: darkred;
+}
+
+p.big-text {
+  font-size: 2.5em;
+  color: #545454;
+  text-align: center;
+}
+
+#big-wrapper {
+  margin: 2em 0 auto;
+}
+
+#big-wrapper > p:nth-child(2) {
+  font-size: 1.5em;
+  color: #545454;
+}
+
+span.highlight {
+  color: #990033;
+}
+
+.main-header h3 { 
+  color: #545454; 
+}
+
+.main-header h1 {
+  font-size: 3em;
+}
+
+h1 {
+  /*margin-top: 3em;*/
+  color: #990033;
+  font-size: 4.6em;
+}
+
+h3.intro {
+  text-align: center;
+  line-height: 1.4em;
+  margin-bottom: .6em;
+}
+
+#map-section > p {
+  text-align: justify;
+}
+
+#city-head {
+  margin-top: 4em;
+  color: #990033;
+}
+
+text {
+  font-family: 'Lato', helvetica, sans-serif;
+}
+
+
+.nav-item a {
+  color: #336699 !important;
+}
+
+#city-name {
+  width: 200px;
+  display: inline-block;
+  text-align: center; 
+}
+
+#user-location {
+  padding: 10vh 0;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  /*margin-top: 2em;*/
+  margin: 0 auto;
+  text-align: center;
+  /*border: 1px solid black;*/
+  /*box-shadow: 10px 10px 5px #888888;*/
+}
+
+.state {
+  fill: #C9CBCD;
+  stroke: white;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+
+circle.city-dot {
+  fill: #C74848;
+  stroke: white;
+  fill-opacity: .6;
+}
+
+circle:hover{
+  cursor: pointer;
+  stroke: #2a2a2a;
+  fill-opacity: .8;
+  fill: darkred;
+}
+
+section {
+  margin: 2em 0;
+}
+
+.categories {
+  text-align: center;
+}
+
+.categories h3 {
+  display: inline;
+  padding-right: 20px;
+}
+
+.categories a {
+  text-decoration: none;
+}
+
+.graph {
+  width: 100%;
+  height: 400px;
+  margin: 2em 0 4em 0;
+  /*box-shadow: 5px 5px 5px #888888;*/
+}
+
+.half {
+  width: 50%;
+  height: 400px;
+  margin: 2em 0 4em 0;
+  /*box-shadow: 5px 5px 5px #888888;*/
+  display: inline-block;
+}
+
+#stats-panel {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+div.summary {
+  margin-bottom: 2em;
+  text-align: left;
+  display: inline-block;
+  margin-right: 2em;
+}
+
+#options {
+  height: 400px;
+}
+
+div.city-graph {
+  height: 400px;
+  width: 100%;
+  background: #ddd;
+  margin: 1em 0 1em 0;
+}
+
+p.big {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 0.6em;
+  color: #333333;
+}
+
+p.subhead {
+  font-size: 1.1em;
+}
+
+#total-num {
+  color: #750000;
+}
+
+#highest-num {
+  color: cadetblue;
+}
+
+#crime-title {
+  margin: 0 0 0.8em 0;
+}
+
+.crime-box {
+  height: 300px;
+  width: 100%;
+  /*border: 1px solid #ddd;*/
+  margin: 1em auto;
+  background-color: rgba(244, 244, 244, .4);
+  overflow: hidden;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #ccc;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+}
+
+.crime-box:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 4px #444;
+}
+
+h3.crime-categ {
+  text-align: center;
+  color: darkred;
+}
+
+img.crime-logo {
+  height: 200px;
+  margin: 1.2em auto;
+  display: block;
+  border: 0;
+}
+
+p.explainer {
+  font-size: 1.5em;
+  /*margin: 1em 1em;*/
+  color: #990033;
+}
+
+img.screenshot {
+  margin: 1.2em auto;
+}
+
+
+#city-table > th {
+  text-align: center;
+}

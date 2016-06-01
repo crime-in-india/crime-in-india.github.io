@@ -1,0 +1,109 @@
+city,year,crime_name,incidences,rate
+Agra,2012,Assault on women with intent to outrage her modesty,61,7.6
+Agra,2012,Insult to the modesty of women,43,5.3
+Ahmedabad,2012,Assault on women with intent to outrage her modesty,79,2.6
+Ahmedabad,2012,Insult to the modesty of women,7,0.2
+Allahabad,2012,Assault on women with intent to outrage her modesty,17,3
+Allahabad,2012,Insult to the modesty of women,0,0
+Amritsar,2012,Assault on women with intent to outrage her modesty,14,2.5
+Amritsar,2012,Insult to the modesty of women,0,0
+Asansol,2012,Assault on women with intent to outrage her modesty,31,5.2
+Asansol,2012,Insult to the modesty of women,4,0.7
+Aurangabad,2012,Assault on women with intent to outrage her modesty,79,13.9
+Aurangabad,2012,Insult to the modesty of women,28,4.9
+Bengaluru,2012,Assault on women with intent to outrage her modesty,321,7.9
+Bengaluru,2012,Insult to the modesty of women,51,1.3
+Bhopal,2012,Assault on women with intent to outrage her modesty,202,22.5
+Bhopal,2012,Insult to the modesty of women,29,3.2
+Chandigarh,2012,Assault on women with intent to outrage her modesty,43,9.3
+Chandigarh,2012,Insult to the modesty of women,23,5
+Chennai,2012,Assault on women with intent to outrage her modesty,90,2.1
+Chennai,2012,Insult to the modesty of women,141,3.3
+Coimbatore,2012,Assault on women with intent to outrage her modesty,17,1.6
+Coimbatore,2012,Insult to the modesty of women,2,0.2
+Delhi,2012,Assault on women with intent to outrage her modesty,639,8.4
+Delhi,2012,Insult to the modesty of women,181,2.4
+Dhanbad,2012,Assault on women with intent to outrage her modesty,4,0.7
+Dhanbad,2012,Insult to the modesty of women,0,0
+Durg-Bhilainagar,2012,Assault on women with intent to outrage her modesty,139,26.8
+Durg-Bhilainagar,2012,Insult to the modesty of women,23,4.4
+Faridabad,2012,Assault on women with intent to outrage her modesty,31,4.7
+Faridabad,2012,Insult to the modesty of women,84,12.8
+Ghaziabad,2012,Assault on women with intent to outrage her modesty,34,3.1
+Ghaziabad,2012,Insult to the modesty of women,37,3.4
+Gwalior,2012,Assault on women with intent to outrage her modesty,110,21.4
+Gwalior,2012,Insult to the modesty of women,11,2.1
+Hyderabad,2012,Assault on women with intent to outrage her modesty,145,3.9
+Hyderabad,2012,Insult to the modesty of women,141,3.7
+India,2012,Assault on women with intent to outrage her modesty,45351,7.7
+India,2012,Insult to the modesty of women,9173,1.6
+Indore,2012,Assault on women with intent to outrage her modesty,297,28.6
+Indore,2012,Insult to the modesty of women,90,8.7
+Jabalpur,2012,Assault on women with intent to outrage her modesty,160,26.5
+Jabalpur,2012,Insult to the modesty of women,41,6.8
+Jaipur,2012,Assault on women with intent to outrage her modesty,91,6.3
+Jaipur,2012,Insult to the modesty of women,0,0
+Jamshedpur,2012,Assault on women with intent to outrage her modesty,18,2.8
+Jamshedpur,2012,Insult to the modesty of women,2,0.3
+Jodhpur,2012,Assault on women with intent to outrage her modesty,43,8
+Jodhpur,2012,Insult to the modesty of women,0,0
+Kannur,2012,Assault on women with intent to outrage her modesty,40,4.5
+Kannur,2012,Insult to the modesty of women,5,0.6
+Kanpur,2012,Assault on women with intent to outrage her modesty,57,4.3
+Kanpur,2012,Insult to the modesty of women,0,0
+Kochi,2012,Assault on women with intent to outrage her modesty,108,10
+Kochi,2012,Insult to the modesty of women,16,1.5
+Kolkata,2012,Assault on women with intent to outrage her modesty,486,7.2
+Kolkata,2012,Insult to the modesty of women,377,5.5
+Kollam,2012,Assault on women with intent to outrage her modesty,171,29.5
+Kollam,2012,Insult to the modesty of women,41,7.1
+Kota,2012,Assault on women with intent to outrage her modesty,73,15.5
+Kota,2012,Insult to the modesty of women,0,0
+Kozhikode,2012,Assault on women with intent to outrage her modesty,103,9.7
+Kozhikode,2012,Insult to the modesty of women,83,7.8
+Lucknow,2012,Assault on women with intent to outrage her modesty,110,8
+Lucknow,2012,Insult to the modesty of women,2,0.1
+Ludhiana,2012,Assault on women with intent to outrage her modesty,30,4.1
+Ludhiana,2012,Insult to the modesty of women,14,1.9
+Madurai,2012,Assault on women with intent to outrage her modesty,28,3.8
+Madurai,2012,Insult to the modesty of women,8,1.1
+Malappuram,2012,Assault on women with intent to outrage her modesty,33,3.7
+Malappuram,2012,Insult to the modesty of women,4,0.4
+Meerut,2012,Assault on women with intent to outrage her modesty,63,9.4
+Meerut,2012,Insult to the modesty of women,0,0
+Mumbai,2012,Assault on women with intent to outrage her modesty,614,7.2
+Mumbai,2012,Insult to the modesty of women,235,2.8
+Nagpur,2012,Assault on women with intent to outrage her modesty,84,6.9
+Nagpur,2012,Insult to the modesty of women,53,4.3
+Nasik,2012,Assault on women with intent to outrage her modesty,36,4.9
+Nasik,2012,Insult to the modesty of women,16,2.2
+Patna,2012,Assault on women with intent to outrage her modesty,15,1.6
+Patna,2012,Insult to the modesty of women,1,0.1
+Pune,2012,Assault on women with intent to outrage her modesty,120,5
+Pune,2012,Insult to the modesty of women,85,3.6
+Raipur,2012,Assault on women with intent to outrage her modesty,89,16.4
+Raipur,2012,Insult to the modesty of women,26,4.8
+Rajkot,2012,Assault on women with intent to outrage her modesty,10,1.5
+Rajkot,2012,Insult to the modesty of women,3,0.5
+Ranchi,2012,Assault on women with intent to outrage her modesty,10,1.9
+Ranchi,2012,Insult to the modesty of women,4,0.7
+Srinagar,2012,Assault on women with intent to outrage her modesty,201,33.7
+Srinagar,2012,Insult to the modesty of women,82,13.8
+Surat,2012,Assault on women with intent to outrage her modesty,28,1.4
+Surat,2012,Insult to the modesty of women,0,0
+Thiruvananthapuram,2012,Assault on women with intent to outrage her modesty,226,25.9
+Thiruvananthapuram,2012,Insult to the modesty of women,19,2.2
+Thrissur,2012,Assault on women with intent to outrage her modesty,111,11.3
+Thrissur,2012,Insult to the modesty of women,32,3.3
+Tiruchirappalli,2012,Assault on women with intent to outrage her modesty,9,1.7
+Tiruchirappalli,2012,Insult to the modesty of women,39,7.6
+Vadodara,2012,Assault on women with intent to outrage her modesty,15,1.7
+Vadodara,2012,Insult to the modesty of women,4,0.5
+Varanasi,2012,Assault on women with intent to outrage her modesty,9,1.3
+Varanasi,2012,Insult to the modesty of women,0,0
+Vasai-Virar,2012,Assault on women with intent to outrage her modesty,46,8
+Vasai-Virar,2012,Insult to the modesty of women,6,1
+Vijayawada,2012,Assault on women with intent to outrage her modesty,223,30.1
+Vijayawada,2012,Insult to the modesty of women,418,56.5
+Vishakhapatnam,2012,Assault on women with intent to outrage her modesty,23,2.7
+Vishakhapatnam,2012,Insult to the modesty of women,11,1.3
