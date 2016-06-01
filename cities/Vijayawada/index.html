@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--Bootstrap styles-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <!--Google font Lato-->
+    <link href='//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Crime in India</title>
+  </head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!--Navbar for mobile screens-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <!--Main navbar-->
+      <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li id="home" class="nav-item"><a href="/">Home</a></li>
+          <li id="stories" class="nav-item"><a href="/stories/" target="_blank">Stories</a></li>
+          <li id="cities" class="nav-item"><a href="/city-list/" target="_blank">Cities</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="about-nav" class="nav-item"><a href="/about/" target="_blank">About</a></li>
+          <li id="references" class="nav-item"><a href="/references/" target="_blank">References</a></li>
+          <li id="crimes" class="nav-item"><a href="/data/" target="_blank">Data</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="main-header">
+        <h1 class="text-center">Vijayawada</h1>
+      </div>
+    </div>
+
+    <div class="categories">
+      <h3><a href="#violent">Violent crimes</a></h3>
+      <h3><a href="#women">Crimes against women</a></h3>
+      <h3><a href="#property">Property crimes</a></h3>
+      <h3><a href="#economic">Economic crimes</a></h3>
+    </div>  
+
+    <section id="violent">  
+      <h3>Violent crimes</h3>
+      <p class="desc">The chart below shows how the rate of violent crimes in Vijayawada have changed since 2010. To compare how Vijayawada fares nationally in violent crimes, click <a href="/violent-crimes/">here</a>.</p>
+      <div id="main-graph" class="graph"></div>
+    </section> 
+
+    <section id="women">
+      <h3>Crimes Against Women</h3>
+      <p class="desc">The chart below shows how the rate of crimes against women in Vijayawada have changed since 2010. The crime rate represents the number of crime incidences per 100,000 women in the city.</p>
+
+      <div id="women-graph" class="graph"></div>
+
+      <h3>Comparison with national average</h3>
+      <p class="desc">The following chart shows a comparison of the heinous crimes against women recorded in Vijayawada to the national average over the past five years. These crimes have been categorized separately since they are more serious in nature. Crime rate represents the number of crime incidences per 100,000 of the population of the city.</p>
+
+      <div id="women-compare" class="graph"></div>      
+    </section> 
+
+    <section id="property">
+      <h3>Property Crimes</h3>
+      <p class="desc">The chart below shows how the rate of property crimes in Vijayawada have changed since 2010. Crime rate represents the number of crime incidences per 100,000 of the population of the city.</p>
+      <div id="property-graph" class="graph"></div> 
+      <div id="prop-compare" class="graph"></div> 
+    </section>
+
+    <section id="economic">
+      <h3>Economic Crimes</h3>
+      <p class="desc">The chart below shows how the rate of economic crimes in Vijayawada have changed since 2010. Crime rate represents the number of crime incidences per 100,000 of the population of the city. Please note that forgery as a crime was only recorded in 2014.</p>
+      <!-- <div id="econ-graph" class="graph"></div>   -->
+      <div id="econ-compare" class="graph"></div> 
+    </section>    
+    
+    <div class="table-responsive">
+      <h3 class="text-center">Major Crimes in Vijayawada</h3>
+      <p class="desc">The following table shows the major crimes in Vijayawada that fall under our four categories. This is, of course, not an exhaustive list, but describes a fair proportion of the serious crimes in Vijayawada. If you wish to see the complete crime table, you can <a href="/data/">go here</a>.</p></p>
+      <table class="table table-condensed table-striped table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center">Crime</th>
+            <th class="text-center">Category</th>
+            <th class="text-right">2010</th>
+            <th class="text-right">2011</th>
+            <th class="text-right">2012</th>
+            <th class="text-right">2013</th>
+            <th class="text-right">2014</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Cruelty%20by%20husband%20or%20his%20relatives/">Cruelty by husband or his relatives</a></td>
+            <td class="text-center ">Crime Against Women</td>
+            <td class="text-right">84.5</td>
+            <td class="text-right">144.0</td>
+            <td class="text-right">153.4</td>
+            <td class="text-right">165.7</td>
+            <td class="text-right">86.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Dowry%20deaths/">Dowry deaths</a></td>
+            <td class="text-center ">Crime Against Women</td>
+            <td class="text-right">2.3</td>
+            <td class="text-right">2.3</td>
+            <td class="text-right">2.2</td>
+            <td class="text-right">1.6</td>
+            <td class="text-right">1.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Rape/">Rape</a></td>
+            <td class="text-center ">Crime Against Women</td>
+            <td class="text-right">3.4</td>
+            <td class="text-right">5.0</td>
+            <td class="text-right">6.3</td>
+            <td class="text-right">6.5</td>
+            <td class="text-right">8.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Sexual%20harassment%20and%20molestation%20of%20women/">Sexual harassment and molestation of women</a></td>
+            <td class="text-center ">Crime Against Women</td>
+            <td class="text-right">52.8</td>
+            <td class="text-right">81.4</td>
+            <td class="text-right">86.6</td>
+            <td class="text-right">95.2</td>
+            <td class="text-right">66.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Cheating/">Cheating</a></td>
+            <td class="text-center ">Economic Crime</td>
+            <td class="text-right">39.4</td>
+            <td class="text-right">28.8</td>
+            <td class="text-right">27.9</td>
+            <td class="text-right">30.8</td>
+            <td class="text-right">26.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Counterfeiting/">Counterfeiting</a></td>
+            <td class="text-center ">Economic Crime</td>
+            <td class="text-right">1.6</td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Criminal%20breach%20of%20trust/">Criminal breach of trust</a></td>
+            <td class="text-center ">Economic Crime</td>
+            <td class="text-right">5.1</td>
+            <td class="text-right">6.8</td>
+            <td class="text-right">8.2</td>
+            <td class="text-right">8.3</td>
+            <td class="text-right">4.6</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Forgery/">Forgery</a></td>
+            <td class="text-center ">Economic Crime</td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">3.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Arson/">Arson</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">2.0</td>
+            <td class="text-right">1.6</td>
+            <td class="text-right">2.2</td>
+            <td class="text-right">1.6</td>
+            <td class="text-right">1.4</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Auto%20theft/">Auto theft</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">53.3</td>
+            <td class="text-right">40.8</td>
+            <td class="text-right">38.0</td>
+            <td class="text-right">52.5</td>
+            <td class="text-right">45.9</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Burglary/">Burglary</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">22.6</td>
+            <td class="text-right">15.6</td>
+            <td class="text-right">14.8</td>
+            <td class="text-right">21.7</td>
+            <td class="text-right">23.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Dacoity/">Dacoity</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">0.3</td>
+            <td class="text-right">0.1</td>
+            <td class="text-right">0.1</td>
+            <td class="text-right">0.1</td>
+            <td class="text-right">0.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Other%20theft/">Other theft</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">77.6</td>
+            <td class="text-right">61.8</td>
+            <td class="text-right">54.9</td>
+            <td class="text-right">93.2</td>
+            <td class="text-right">89.3</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Robbery/">Robbery</a></td>
+            <td class="text-center ">Property Crime</td>
+            <td class="text-right">2.0</td>
+            <td class="text-right">2.3</td>
+            <td class="text-right">4.0</td>
+            <td class="text-right">4.4</td>
+            <td class="text-right">3.2</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Attempt%20to%20commit%20murder/">Attempt to commit murder</a></td>
+            <td class="text-center ">Violent Crime</td>
+            <td class="text-right">4.8</td>
+            <td class="text-right">4.4</td>
+            <td class="text-right">3.8</td>
+            <td class="text-right">3.7</td>
+            <td class="text-right">3.0</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Culpable%20homicide%20not%20amounting%20to%20murder/">Culpable homicide not amounting to murder</a></td>
+            <td class="text-center ">Violent Crime</td>
+            <td class="text-right">0.1</td>
+            <td class="text-right">0.3</td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.5</td>
+            <td class="text-right">0.1</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Kidnapping%20%26%20abduction/">Kidnapping &amp; abduction</a></td>
+            <td class="text-center ">Violent Crime</td>
+            <td class="text-right">8.6</td>
+            <td class="text-right">4.7</td>
+            <td class="text-right">4.4</td>
+            <td class="text-right">4.8</td>
+            <td class="text-right">2.8</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Murder/">Murder</a></td>
+            <td class="text-center ">Violent Crime</td>
+            <td class="text-right">3.3</td>
+            <td class="text-right">2.3</td>
+            <td class="text-right">2.8</td>
+            <td class="text-right">1.9</td>
+            <td class="text-right">1.5</td>
+          </tr>
+          
+          <tr>
+            <td class="text-center"><a href="/crime/Riots/">Riots</a></td>
+            <td class="text-center ">Violent Crime</td>
+            <td class="text-right">0.8</td>
+            <td class="text-right">0.1</td>
+            <td class="text-right">1.1</td>
+            <td class="text-right">0.4</td>
+            <td class="text-right">0.1</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="about-notes">Notes</h3>
+    <ul class="about">
+      <li class="about">
+        <p>From 2010 to 2012, the Bureau recorded rates for crimes against women using the total population. This does not reflect the true picture. Hence, we did our own computation of crime rates for all crimes against women using the population of women as per the <a href="http://www.censusindia.gov.in/2011-prov-results/paper2-vol2/data_files/India2/Table_3_PR_UA_Citiees_1Lakh_and_Above.xls" target="_blank">2011 Census provisional population totals<sup>[xls]</sup></a>.</p>
+      </li>
+      <li class="about">
+        <p>We have also added a new category for crimes against women: <span class="highlight">'Sexual harassment and molestation of women' </span>. This is because of the lack of consistency in the way the Bureau reports sexual crimes against women that are not rape i.e. Section 354 and Section 509. In 2010 and 2011, crimes recorded under these sections were reported as 'Molestation' and 'Sexual harassment' respectively. The following years, they were reported as 'Assault on women with intent to outrage modesty' and 'Insult to the modesty of women'.
+        </p>  
+
+        <p>
+          We first standardized the nomenclature across all years. Section 354 crimes were named 'Assault on women with intent to outrage modesty' and Section 509 crimes were placed under the 'Insult to the modesty of women' head.
+        </p>
+
+        <p>
+          We then added our new category <span class="highlight">'Sexual harassment and molestation of women' </span> by adding the number of incidences for crimes under the aforementioned two sections. We then calculated the crime rate for this new composite category using the  2011 Census population numbers.
+        </p>
+    </ul>
+  </div>
+
+  <script src="/static/d3/d3.min.js"></script>
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/highcharts.js"></script>
+
+  <script type="text/javascript">
+    var cityData = [{"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Acid attack"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Agrarian riots"}, {"2010": "2.0", "2011": "1.6", "2012": "2.2", "2013": "1.6", "2014": "1.4", "avg": "1.8", "categ": "Property Crime", "crime_name": "Arson"}, {"2010": "23.2", "2011": "33.5", "2012": "30.1", "2013": "33.6", "2014": "37.7", "avg": "31.6", "crime_name": "Assault on women with intent to outrage her modesty"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Attempt to acid attack"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Attempt to commit culpable homicide not amounting to murder"}, {"2010": "4.8", "2011": "4.4", "2012": "3.8", "2013": "3.7", "2014": "3.0", "avg": "3.9", "categ": "Violent Crime", "crime_name": "Attempt to commit murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.5", "avg": "0.5", "crime_name": "Attempt to commit rape"}, {"2010": "53.3", "2011": "40.8", "2012": "38.0", "2013": "52.5", "2014": "45.9", "avg": "46.1", "categ": "Property Crime", "crime_name": "Auto theft"}, {"2010": "22.6", "2011": "15.6", "2012": "14.8", "2013": "21.7", "2014": "23.1", "avg": "19.6", "categ": "Property Crime", "crime_name": "Burglary"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Caste conflict riots"}, {"2010": "35.9", "2011": "21.0", "2012": "24.8", "2013": "21.8", "2014": "20.9", "avg": "24.9", "crime_name": "Causing death by negligence"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "91.6", "avg": "91.6", "crime_name": "Causing injuries under rash driving/road rage"}, {"2010": "39.4", "2011": "28.8", "2012": "27.9", "2013": "30.8", "2014": "26.2", "avg": "30.6", "categ": "Economic Crime", "crime_name": "Cheating"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Communal riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.8", "avg": "0.8", "crime_name": "Counterfeit currency \u0026 bank notes total"}, {"2010": "1.6", "2011": "0.4", "2012": "0.4", "2013": "0.4", "2014": "0.8", "avg": "0.7", "categ": "Economic Crime", "crime_name": "Counterfeiting"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Counterfeiting currency - notes or bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Counterfeiting government stamp"}, {"2010": "5.1", "2011": "6.8", "2012": "8.2", "2013": "8.3", "2014": "4.6", "avg": "6.6", "categ": "Economic Crime", "crime_name": "Criminal breach of trust"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "7.1", "avg": "7.1", "crime_name": "Criminal trespass/burglary"}, {"2010": "84.5", "2011": "144.0", "2012": "153.4", "2013": "165.7", "2014": "86.8", "avg": "126.9", "categ": "Crime Against Women", "crime_name": "Cruelty by husband or his relatives"}, {"2010": "0.1", "2011": "0.3", "2012": "0.4", "2013": "0.5", "2014": "0.1", "avg": "0.3", "categ": "Violent Crime", "crime_name": "Culpable homicide not amounting to murder"}, {"2010": "0.0", "2011": "0.0", "2012": "0.0", "2013": "0.0", "2014": "0.0", "avg": "0.0", "crime_name": "Custodial rape"}, {"2010": "0.3", "2011": "0.1", "2012": "0.1", "2013": "0.1", "2014": "0.2", "avg": "0.2", "categ": "Property Crime", "crime_name": "Dacoity"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Dacoity with murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Deaths due to other causes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "20.9", "avg": "20.9", "crime_name": "Deaths due to rash/negligent driving"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Disclosure of identity of victims"}, {"2010": "2.3", "2011": "2.3", "2012": "2.2", "2013": "1.6", "2014": "1.4", "avg": "2.0", "categ": "Crime Against Women", "crime_name": "Dowry deaths"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.3", "avg": "2.3", "crime_name": "Extortion"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.1", "avg": "3.1", "categ": "Economic Crime", "crime_name": "Forgery"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Gang rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Gang rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.7", "avg": "1.7", "crime_name": "Grievous hurt"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "16.0", "avg": "16.0", "crime_name": "House trespass \u0026 house breaking"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Human trafficking"}, {"2010": "154.8", "2011": "123.5", "2012": "131.5", "2013": "131.1", "2014": "1.7", "avg": "108.5", "crime_name": "Hurt"}, {"2010": "0.0", "2011": "0.0", "2012": "0.0", "2013": "0.0", "2014": "0.0", "avg": "0.0", "crime_name": "Importation of girls from foreign country"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Imputation or assertions prejudicial to national integration"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Industrial riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Insult to modesty of women at office premises"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "28.5", "avg": "28.5", "crime_name": "Insult to modesty of women at other places"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Insult to modesty of women in other places related to work"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Insult to modesty of women in public transport system"}, {"2010": "29.6", "2011": "47.9", "2012": "56.5", "2013": "61.6", "2014": "28.6", "avg": "44.8", "crime_name": "Insult to the modesty of women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.9", "avg": "0.9", "crime_name": "Kidnapping"}, {"2010": "8.6", "2011": "4.7", "2012": "4.4", "2013": "4.8", "2014": "2.8", "avg": "5.1", "categ": "Violent Crime", "crime_name": "Kidnapping \u0026 abduction"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Kidnapping \u0026 abduction in order to murder"}, {"2010": "2.2", "2011": "1.3", "2012": "", "2013": "1.8", "2014": "", "avg": "1.8", "crime_name": "Kidnapping \u0026 abduction of others"}, {"2010": "8.8", "2011": "6.8", "2012": "5.3", "2013": "6.1", "2014": "", "avg": "6.8", "crime_name": "Kidnapping \u0026 abduction of women and girls"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.5", "avg": "1.5", "crime_name": "Kidnapping \u0026 abduction of women to compel her for marriage"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Kidnapping for ransom"}, {"2010": "", "2011": "", "2012": "1.8", "2013": "", "2014": "", "avg": "1.8", "crime_name": "Kidnapping of others"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Making or possessing materials for forged currency/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Making or using documents resembling currency notes/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Making preparation and assembly for committing dacoity"}, {"2010": "3.3", "2011": "2.3", "2012": "2.8", "2013": "1.9", "2014": "1.5", "avg": "2.4", "categ": "Violent Crime", "crime_name": "Murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Offences against state"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Offences promoting enmity between different groups"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Offences related to counterfeit coin"}, {"2010": "60.0", "2011": "54.2", "2012": "72.7", "2013": "91.1", "2014": "123.1", "avg": "80.2", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "16.8", "avg": "16.8", "crime_name": "Other cases of assault on women to outrage her modesty"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Other caste conflict riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.1", "avg": "1.1", "crime_name": "Other kidnapping \u0026 abduction"}, {"2010": "3.4", "2011": "5.0", "2012": "6.3", "2013": "6.5", "2014": "0.03333333333333333", "avg": "4.2", "crime_name": "Other rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.6", "avg": "8.6", "crime_name": "Other rape other than custodial"}, {"2010": "77.6", "2011": "61.8", "2012": "54.9", "2013": "93.2", "2014": "89.3", "avg": "75.4", "categ": "Property Crime", "crime_name": "Other theft"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Political riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Possession of forged or counterfeiting currency/bank notes"}, {"2010": "0.0", "2011": "0.0", "2012": "0.0", "2013": "0.0", "2014": "", "avg": "0.0", "crime_name": "Preparation \u0026 assembly for dacoity"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Promoting enmity between different groups on ground of religion, race, place of birth, etc."}, {"2010": "3.4", "2011": "5.0", "2012": "6.3", "2013": "6.5", "2014": "8.6", "avg": "6.0", "categ": "Crime Against Women", "crime_name": "Rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.6", "avg": "8.6", "crime_name": "Rape other than custodial"}, {"2010": "0.8", "2011": "0.1", "2012": "1.1", "2013": "0.4", "2014": "0.1", "avg": "0.5", "categ": "Violent Crime", "crime_name": "Riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Riots others"}, {"2010": "2.0", "2011": "2.3", "2012": "4.0", "2013": "4.4", "2014": "3.2", "avg": "3.2", "categ": "Property Crime", "crime_name": "Robbery"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "SCs/STs vs Non-SCs/STs riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Sectarian riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Sedition"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.4", "avg": "5.4", "crime_name": "Sexual harassment"}, {"2010": "52.8", "2011": "81.4", "2012": "86.6", "2013": "95.2", "2014": "66.3", "avg": "76.5", "categ": "Crime Against Women", "crime_name": "Sexual harassment and molestation of women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "12.3", "avg": "12.3", "crime_name": "Stalking"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Student riots"}, {"2010": "131.0", "2011": "102.7", "2012": "92.9", "2013": "145.7", "2014": "135.2", "avg": "121.5", "crime_name": "Theft"}, {"2010": "577.0", "2011": "484.6", "2012": "515.5", "2013": "602.1", "2014": "528.2", "avg": "541.5", "crime_name": "Total cognizable crimes under IPC"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.7", "avg": "1.7", "crime_name": "Unlawful assembly"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Unnatural offences"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.0", "avg": "2.0", "crime_name": "Use of criminal force with intent to disrobe women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.8", "avg": "0.8", "crime_name": "Using as genuine, forged or counterfeiting currency/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.2", "avg": "1.2", "crime_name": "Voyeurism"}];
+    var indiaData = [{"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Acid attack"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Agrarian riots"}, {"2010": "0.7", "2011": "0.7", "2012": "1.0", "2013": "0.8", "2014": "0.7", "avg": "0.8", "crime_name": "Arson"}, {"2010": "6.9", "2011": "7.3", "2012": "7.7", "2013": "11.9", "2014": "13.7", "avg": "9.5", "crime_name": "Assault on women with intent to outrage her modesty"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Attempt to acid attack"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.4", "avg": "0.4", "crime_name": "Attempt to commit culpable homicide not amounting to murder"}, {"2010": "2.5", "2011": "2.6", "2012": "2.9", "2013": "2.9", "2014": "3.4", "avg": "2.9", "crime_name": "Attempt to commit murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.7", "avg": "0.7", "crime_name": "Attempt to commit rape"}, {"2010": "12.4", "2011": "12.5", "2012": "12.7", "2013": "13.5", "2014": "14.9", "avg": "13.2", "crime_name": "Auto theft"}, {"2010": "7.6", "2011": "7.6", "2012": "7.7", "2013": "8.5", "2014": "9.2", "avg": "8.1", "crime_name": "Burglary"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Caste conflict riots"}, {"2010": "9.0", "2011": "9.0", "2012": "8.9", "2013": "9.1", "2014": "10.4", "avg": "9.3", "crime_name": "Causing death by negligence"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "32.9", "avg": "32.9", "crime_name": "Causing injuries under rash driving/road rage"}, {"2010": "6.7", "2011": "7.2", "2012": "7.8", "2013": "8.7", "2014": "8.8", "avg": "7.8", "crime_name": "Cheating"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Communal riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Counterfeit currency \u0026 bank notes total"}, {"2010": "0.2", "2011": "0.2", "2012": "0.2", "2013": "0.2", "2014": "0.2", "avg": "0.2", "crime_name": "Counterfeiting"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Counterfeiting currency - notes or bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Counterfeiting government stamp"}, {"2010": "1.4", "2011": "1.4", "2012": "1.5", "2013": "1.6", "2014": "1.6", "avg": "1.5", "crime_name": "Criminal breach of trust"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.8", "avg": "6.8", "crime_name": "Criminal trespass/burglary"}, {"2010": "16.0", "2011": "16.9", "2012": "18.2", "2013": "20.1", "2014": "20.5", "avg": "18.3", "crime_name": "Cruelty by husband or his relatives"}, {"2010": "0.3", "2011": "0.3", "2012": "0.3", "2013": "0.7", "2014": "0.3", "avg": "0.4", "crime_name": "Culpable homicide not amounting to murder"}, {"2010": "0.0", "2011": "0.0", "2012": "0.0", "2013": "0.0", "2014": "0.0", "avg": "0.0", "crime_name": "Custodial rape"}, {"2010": "0.4", "2011": "0.4", "2012": "0.4", "2013": "0.4", "2014": "0.4", "avg": "0.4", "crime_name": "Dacoity"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Dacoity with murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.5", "avg": "0.5", "crime_name": "Deaths due to other causes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "9.8", "avg": "9.8", "crime_name": "Deaths due to rash/negligent driving"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Disclosure of identity of victims"}, {"2010": "1.4", "2011": "1.5", "2012": "1.4", "2013": "1.4", "2014": "1.4", "avg": "1.4", "crime_name": "Dowry deaths"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.7", "avg": "0.7", "crime_name": "Extortion"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.9", "avg": "0.9", "crime_name": "Forgery"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Gang rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.4", "avg": "0.4", "crime_name": "Gang rape other than custodial"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.4", "avg": "8.4", "crime_name": "Grievous hurt"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.4", "avg": "2.4", "crime_name": "House trespass \u0026 house breaking"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Human trafficking"}, {"2010": "24.4", "2011": "25.0", "2012": "27.4", "2013": "27.2", "2014": "8.5", "avg": "22.5", "crime_name": "Hurt"}, {"2010": "0.0", "2011": "0.0", "2012": "0.0", "2013": "0.0", "2014": "0.0", "avg": "0.0", "crime_name": "Importation of girls from foreign country"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Imputation or assertions prejudicial to national integration"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Industrial riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Insult to modesty of women at office premises"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.5", "avg": "1.5", "crime_name": "Insult to modesty of women at other places"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Insult to modesty of women in other places related to work"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Insult to modesty of women in public transport system"}, {"2010": "1.7", "2011": "1.5", "2012": "1.6", "2013": "2.1", "2014": "1.6", "avg": "1.7", "crime_name": "Insult to the modesty of women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "2.0", "avg": "2.0", "crime_name": "Kidnapping"}, {"2010": "3.2", "2011": "3.7", "2012": "3.9", "2013": "5.3", "2014": "6.2", "avg": "4.5", "crime_name": "Kidnapping \u0026 abduction"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Kidnapping \u0026 abduction in order to murder"}, {"2010": "0.7", "2011": "0.8", "2012": "", "2013": "1.1", "2014": "", "avg": "0.9", "crime_name": "Kidnapping \u0026 abduction of others"}, {"2010": "5.1", "2011": "6.1", "2012": "6.5", "2013": "28.8", "2014": "", "avg": "11.6", "crime_name": "Kidnapping \u0026 abduction of women and girls"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.1", "avg": "5.1", "crime_name": "Kidnapping \u0026 abduction of women to compel her for marriage"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Kidnapping for ransom"}, {"2010": "", "2011": "", "2012": "0.8", "2013": "", "2014": "", "avg": "0.8", "crime_name": "Kidnapping of others"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Making or possessing materials for forged currency/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Making or using documents resembling currency notes/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.2", "avg": "0.2", "crime_name": "Making preparation and assembly for committing dacoity"}, {"2010": "2.8", "2011": "2.8", "2012": "2.8", "2013": "2.7", "2014": "2.7", "avg": "2.8", "crime_name": "Murder"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Offences against state"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Offences promoting enmity between different groups"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Offences related to counterfeit coin"}, {"2010": "77.9", "2011": "79.8", "2012": "79.6", "2013": "88.9", "2014": "75.8", "avg": "80.4", "crime_name": "Other IPC crimes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "8.1", "avg": "8.1", "crime_name": "Other cases of assault on women to outrage her modesty"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Other caste conflict riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.3", "avg": "0.3", "crime_name": "Other dacoity"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.5", "avg": "1.5", "crime_name": "Other kidnapping \u0026 abduction"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Other offences against state"}, {"2010": "3.8", "2011": "4.1", "2012": "4.2", "2013": "5.7", "2014": "0.0", "avg": "3.6", "crime_name": "Other rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "5.7", "avg": "5.7", "crime_name": "Other rape other than custodial"}, {"2010": "15.4", "2011": "15.7", "2012": "15.1", "2013": "16.8", "2014": "20.5", "avg": "16.7", "crime_name": "Other theft"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Political riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Possession of forged or counterfeiting currency/bank notes"}, {"2010": "0.2", "2011": "0.2", "2012": "0.3", "2013": "0.3", "2014": "", "avg": "0.2", "crime_name": "Preparation \u0026 assembly for dacoity"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Promoting enmity between different groups on ground of religion, race, place of birth, etc"}, {"2010": "3.8", "2011": "4.1", "2012": "4.2", "2013": "5.7", "2014": "6.1", "avg": "4.8", "crime_name": "Rape"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "6.1", "avg": "6.1", "crime_name": "Rape other than custodial"}, {"2010": "5.7", "2011": "5.7", "2012": "6.2", "2013": "5.9", "2014": "5.3", "avg": "5.8", "crime_name": "Riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "4.9", "avg": "4.9", "crime_name": "Riots others"}, {"2010": "2.0", "2011": "2.0", "2012": "2.3", "2013": "2.6", "2014": "3.1", "avg": "2.4", "crime_name": "Robbery"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "SCs/STs vs Non-SCs/STs riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Sectarian riots"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Sedition"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "3.7", "avg": "3.7", "crime_name": "Sexual harassment"}, {"2010": "8.6", "2011": "8.8", "2012": "9.3", "2013": "14.2", "2014": "15.5", "avg": "11.3", "crime_name": "Sexual harassment and molestation of women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.8", "avg": "0.8", "crime_name": "Stalking"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.0", "avg": "0.0", "crime_name": "Student riots"}, {"2010": "27.9", "2011": "28.2", "2012": "27.8", "2013": "30.3", "2014": "35.4", "avg": "29.9", "crime_name": "Theft"}, {"2010": "187.6", "2011": "192.2", "2012": "196.7", "2013": "215.5", "2014": "229.2", "avg": "204.2", "crime_name": "Total cognizable crimes under IPC"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.8", "avg": "0.8", "crime_name": "Unlawful assembly"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Unnatural offences"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "1.1", "avg": "1.1", "crime_name": "Use of criminal force with intent to disrobe women"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Using as genuine, forged or counterfeiting currency/bank notes"}, {"2010": "", "2011": "", "2012": "", "2013": "", "2014": "0.1", "avg": "0.1", "crime_name": "Voyeurism"}];
+    var violentCrimes = ["Attempt to commit murder", "Culpable homicide not amounting to murder", "Kidnapping \u0026 abduction", "Murder", "Riots"];
+    var womenCrimes = ["Cruelty by husband or his relatives", "Dowry deaths", "Molestation", "Rape", "Sexual harassment and molestation of women"];
+    var propCrimes = ["Arson", "Auto theft", "Burglary", "Dacoity", "Other theft", "Robbery"];
+    var econCrimes = ["Cheating", "Counterfeiting", "Criminal breach of trust", "Forgery"];
+
+    var violentData = cityData.filter(function(d) {
+      return violentCrimes.indexOf(d.crime_name) > -1; 
+    });
+
+    var cityWomen = cityData.filter(function(d) {
+      return womenCrimes.indexOf(d.crime_name) > -1;
+    });
+    var indiaWomen = indiaData.filter(function(d) {
+      return womenCrimes.indexOf(d.crime_name) > -1;
+    });
+
+    var propData = cityData.filter(function(d) {
+      return propCrimes.indexOf(d.crime_name) > -1;
+    });
+    var indiaProp = indiaData.filter(function(d) {
+      return propCrimes.indexOf(d.crime_name) > -1;
+    });
+
+    var econData = cityData.filter(function(d) {
+      return econCrimes.indexOf(d.crime_name) > -1;
+    });
+    var indiaEcon = indiaData.filter(function(d) {
+      return econCrimes.indexOf(d.crime_name) > -1;
+    });
+
+    drawViolent(violentData);
+    drawWomen(cityWomen);
+    drawNational(cityWomen, indiaWomen);
+    drawProperty(propData, indiaProp);
+    drawEcon(econData, indiaEcon);
+
+    /**************************************************
+    /********** VIOLENT CRIMES ************************
+    **************************************************/
+
+
+    function drawViolent(violentData) {
+
+      var chartsToShow = [];
+      var chartObj = {};
+      var chartTitle = 'Rate of violent crimes in Vijayawada';
+
+      violentData.forEach(function(d) {
+        chartObj = { 
+          name: d.crime_name, 
+          data: [+d['2010'], +d['2011'], +d['2012'], +d['2013'], +d['2014']] 
+        };
+        chartsToShow.push(chartObj);
+      });
+
+      $(function () {
+        $('#main-graph').highcharts({
+          chart: {
+            type: 'column'
+          },
+          title: {
+              text: chartTitle,
+              x: -20 //center
+          },
+          xAxis: {
+              categories: ['2010', '2011', '2012', '2013', '2014']
+          },
+          yAxis: {
+              title: {
+                  text: 'Rate of violent crimes'
+              },
+              plotLines: [{
+                  value: 0,
+                  width: 1,
+                  color: '#808080'
+              }]
+          },
+          credits: {
+            enabled: false
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0,
+                  dataLabels: {
+                    enabled: true
+                  }
+              },
+              
+            },
+          tooltip: {
+              valueSuffix: ''
+          },
+          legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+          },
+          series: chartsToShow
+        });
+      });
+    }
+
+    /*****************************************************
+    /**********  CRIMES AGAINST WOMEN ************************
+    *****************************************************/
+    
+
+    function drawWomen(womenData) {
+
+      var chartsToShow = [];
+      var chartObj = {};
+      var chartTitle = 'Rates of crimes against women in Vijayawada';
+
+      womenData.forEach(function(d) {
+        chartObj = { 
+          name: d.crime_name, 
+          data: [+d['2010'], +d['2011'], +d['2012'], +d['2013'], +d['2014']] 
+        };
+        chartsToShow.push(chartObj);
+      });
+
+      $(function () {
+        $('#women-graph').highcharts({
+          chart: {
+            type: 'column'
+          },
+          title: {
+              text: chartTitle,
+              x: -20 //center
+          },
+          xAxis: {
+              categories: ['2010', '2011', '2012', '2013', '2014']
+          },
+          yAxis: {
+              title: {
+                  text: 'Rate of crimes against women'
+              },
+              plotLines: [{
+                  value: 0,
+                  width: 1,
+                  color: '#808080'
+              }]
+          },
+          credits: {
+            enabled: false
+          },
+          tooltip: {
+              valueSuffix: ''
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0,
+                  dataLabels: {
+                    enabled: true
+                  }
+              }
+            },
+          legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+          },
+          series: chartsToShow
+        });
+      });
+
+    }
+
+    /*****************************************************
+    /**********  WOMEN CRIMES V/S NATIONAL AVG ************
+    *****************************************************/
+
+    function drawNational(cityWomen, indiaWomen) {
+
+      var categories = [],
+          cityData = [],
+          natData = [];
+
+      cityWomen.forEach(function(d) {
+        categories.push(d.crime_name);
+        cityData.push(+d.avg); 
+      });
+      
+      indiaWomen.forEach(function(d) {
+        natData.push(+d.avg);
+      })
+
+      var chartObj = {};
+      var chartTitle = 'Crimes against women in Vijayawada v/s India';
+
+      var cityChart = {
+        name: 'Vijayawada',
+        data: cityData 
+      };
+
+      var indiaChart = {
+        name: 'India',
+        data: natData
+      };
+
+      var chartsToShow = [cityChart, indiaChart];
+
+
+      $(function () {
+        $('#women-compare').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: chartTitle
+            },
+            // subtitle: {
+            //     text: 'Source: WorldClimate.com'
+            // },
+            xAxis: {
+                categories: categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Crime rate per 100,000 people'
+                }
+            },
+            credits: {
+              enabled: false
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: chartsToShow
+        });
+      });
+
+    }
+
+    /*****************************************************
+    /*****************  PROPERTY CRIMES ******************
+    *****************************************************/
+
+    function drawProperty(propData, indiaProp) {
+      var categories = [],
+          cityData = [],
+          natData = [];
+
+      var chartsToShow = [];
+      var chartObj = {};
+      var chartTitle = 'Rate of property crimes in Vijayawada';
+
+      propData.forEach(function(d) {
+        chartObj = { 
+          name: d.crime_name, 
+          data: [+d['2010'], +d['2011'], +d['2012'], +d['2013'], +d['2014']] 
+        };
+        chartsToShow.push(chartObj);
+      });
+
+      propData.forEach(function(d) {
+        categories.push(d.crime_name);
+        cityData.push(+d.avg); 
+      });
+      
+      indiaProp.forEach(function(d) {
+        natData.push(+d.avg);
+      });
+
+      var cityChart = {
+        name: 'Vijayawada',
+        data: cityData 
+      };
+
+      var indiaChart = {
+        name: 'India',
+        data: natData
+      };
+
+      var compCharts = [cityChart, indiaChart];
+
+      $(function () {
+        $('#property-graph').highcharts({
+          chart: {
+            type: 'column'
+          },
+          title: {
+              text: chartTitle,
+              x: -20 //center
+          },
+          xAxis: {
+              categories: ['2010', '2011', '2012', '2013', '2014']
+          },
+          yAxis: {
+              title: {
+                  text: 'Crime rate per 100,000 people'
+              },
+              plotLines: [{
+                  value: 0,
+                  width: 1,
+                  color: '#808080'
+              }]
+          },
+          credits: {
+            enabled: false
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0,
+                  dataLabels: {
+                    enabled: true
+                  }
+              }
+          },
+
+          legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+          },
+          series: chartsToShow
+        });
+      });
+
+      // Comparison with national average
+      $(function () {
+        $('#prop-compare').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Property crimes in Vijayawada v/s India'
+            },
+            xAxis: {
+                categories: categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Crime rate per 100,000 people'
+                }
+            },
+            credits: {
+              enabled: false
+            },
+            legend: {
+              layout: 'horizontal',
+              align: 'right',
+              verticalAlign: 'bottom',
+              borderWidth: 0,
+              floating: false
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: compCharts
+        });
+      });
+    }
+
+    /*****************************************************
+    /**********  ECON CRIMES V/S NATIONAL AVG ************
+    *****************************************************/
+
+    function drawEcon(econData, indiaEcon) {
+
+      var categories = [],
+          cityData = [],
+          natData = [];
+
+      econData.forEach(function(d) {
+        categories.push(d.crime_name);
+        cityData.push(+d.avg); 
+      });
+      
+      indiaEcon.forEach(function(d) {
+        natData.push(+d.avg);
+      })
+
+      var chartObj = {};
+      var chartTitle = 'Economic crimes in Vijayawada v/s India';
+
+      var cityChart = {
+        name: 'Vijayawada',
+        data: cityData 
+      };
+
+      var indiaChart = {
+        name: 'India',
+        data: natData
+      };
+
+      var chartsToShow = [cityChart, indiaChart];
+
+
+      $(function () {
+        $('#econ-compare').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: chartTitle
+            },
+            xAxis: {
+                categories: categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Crime rate per 100,000 people'
+                }
+            },
+            credits: {
+              enabled: false
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: chartsToShow
+        });
+      });
+
+    }
+
+    $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+          window.location.hash = target;
+      });
+    });
+
+    
+  </script>
+  <footer>
+  <div class="container text-center">
+    <p class="text-muted">
+      Made by Saurabh Datar
+      <br>
+      Icons courtesy <a href="https://thenounproject.com/naripuru/collection/crimes-and-justice-outlines/">parkjisun from The Noun Project</a>
+    </p>
+  </div>
+</footer>  
+</body>
+</html>

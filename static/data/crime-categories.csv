@@ -11,7 +11,7 @@ Auto theft,Property Crime,prop-crime
 Burglary,Property Crime,prop-crime
 Caste conflict riots,NA,na
 Causing death by negligence,Other Crime,other-crime
-Causing injuries under rash driving/road rage,Other Crime,other-crime
+Causing injuries under rash driving or road rage,Other Crime,other-crime
 Cheating,Economic Crime,econ-crime
 Communal riots,NA,na
 Counterfeit currency & bank notes total,NA,na
@@ -19,14 +19,14 @@ Counterfeiting,Economic Crime,other-crime
 Counterfeiting currency - notes or bank notes,NA,na
 Counterfeiting government stamp,NA,na
 Criminal breach of trust,Economic Crime,econ-crime
-Criminal trespass/burglary,NA,na
+Criminal trespass or burglary,NA,na
 Cruelty by husband or his relatives,Crime Against Women,women-crime
 Culpable homicide not amounting to murder,Violent Crime,violent-crime
 Custodial rape,NA,na
 Dacoity,Property Crime,prop-crime
 Dacoity with murder,NA,na
 Deaths due to other causes,NA,na
-Deaths due to rash/negligent driving,Other Crime,other-crime
+Deaths due to rash or negligent driving,Other Crime,other-crime
 Disclosure of identity of victims,NA,na
 Dowry deaths,Crime Against Women,women-crime
 Extortion,Other Crime,other-crime
@@ -52,8 +52,8 @@ Kidnapping & abduction of women and girls,NA,na
 Kidnapping & abduction of women to compel her for marriage,NA,na
 Kidnapping for ransom,NA,na
 Kidnapping of others,NA,na
-Making or possessing materials for forged currency/bank notes,NA,na
-Making or using documents resembling currency notes/bank notes,NA,na
+Making or possessing materials for forged currency or bank notes,NA,na
+Making or using documents resembling currency notes or bank notes,NA,na
 Making preparation and assembly for committing dacoity,NA,na
 Molestation,Crime Against Women,women-crime
 Murder,Violent Crime,violent-crime
@@ -70,7 +70,7 @@ Other rape,NA,na
 Other rape other than custodial,NA,na
 Other theft,Property Crime,prop-crime
 Political riots,NA,na
-Possession of forged or counterfeiting currency/bank notes,NA,na
+Possession of forged or counterfeiting currency or bank notes,NA,na
 Preparation & assembly for dacoity,NA,na
 "Promoting enmity between different groups on ground of religion, race, place of birth, etc.",NA,na
 Rape,Crime Against Women,women-crime
@@ -78,7 +78,7 @@ Rape other than custodial,NA,na
 Riots,Violent Crime,violent-crime
 Riots others,NA,na
 Robbery,Property Crime,prop-crime
-SCs/STs vs Non-SCs/STs riots,NA,na
+SCs-STs vs Non-SCs-STs riots,NA,na
 Sectarian riots,NA,na
 Sedition,NA,na
 Sexual harassment,NA,na
@@ -90,5 +90,5 @@ Total cognizable crimes under IPC,NA,na
 Unlawful assembly,Other Crime,other-crime
 Unnatural offences,NA,na
 Use of Criminal force with intent to disrobe women,NA,na
-"Using as genuine, forged or counterfeiting currency/bank notes",NA,na
+"Using as genuine, forged or counterfeiting currency or bank notes",NA,na
 Voyeurism,NA,na
