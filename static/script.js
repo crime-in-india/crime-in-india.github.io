@@ -11,7 +11,7 @@
 
 
   var proj = d3.geo.mercator()
-  .center([83, 27])
+  .center([85, 27])
   .scale(1200);
 
   var path = d3.geo.path()

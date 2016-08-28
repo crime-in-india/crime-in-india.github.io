@@ -10,6 +10,11 @@ footer {
   background-color: #e7e7e7;
 }
 
+.container {
+  max-width: 56.35em;
+}
+
+
 article {
   padding: 4em;
   max-width: 900px;
@@ -55,9 +60,13 @@ span.highlight {
   padding: 0;
 }
 
+.list {
+  padding: 0;
+}
+
 h3.list-head {
   color: #990033;
-  margin-left: 1.5em;
+  /*margin-left: 1.5em;*/
 }
 
 p.list-sub {
@@ -74,6 +83,7 @@ p.intro {
 p.desc {
   font-size: 1.2em;
   color: #545454;
+  line-height: 1.6em;
 }
 
 p.intro-text {
@@ -150,7 +160,7 @@ text {
 }
 
 #user-location {
-  padding: 10vh 0;
+  padding: 5vh 0;
   text-align: center;
 }
 
@@ -263,16 +273,12 @@ p.subhead {
 }
 
 .crime-box {
-  height: 300px;
+  height: auto;
   width: 100%;
-  /*border: 1px solid #ddd;*/
+  border: 1px solid #ddd;
   margin: 1em auto;
   background-color: rgba(244, 244, 244, .4);
   overflow: hidden;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #ccc;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
@@ -280,19 +286,35 @@ p.subhead {
 
 .crime-box:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 4px #444;
+  box-shadow: 1px 1px 1px rgba(68,68,68,.3);
+  -webkit-box-shadow: 1px 1px 1px rgba(68,68,68,.3);
+  -moz-box-shadow: 1px 1px 1px rgba(68,68,68,.3);
 }
 
-h3.crime-categ {
+.crime-categ {
   text-align: center;
   color: darkred;
+  font-size: 1.5em;
+  padding: .1em;
+  /*margin: 0 .5em;*/
 }
 
-img.crime-logo {
-  margin: 1.2em auto;
+/*.crime-logo {
+  margin: 1.2em;
   display: block;
   border: 0;
+  max-width: 100%;
+  height: auto;
+}*/
+
+#list-section .head {
+  margin-left: .5em;
 }
+
+#list-section .desc {
+  margin-left: 1em;
+}
+
 
 p.explainer {
   font-size: 1.5em;
@@ -307,4 +329,22 @@ img.screenshot {
 
 #city-table > th {
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  #header h1 {
+    font-size: 3.5em;
+  }
+
+  #header h3 {
+    font-size: 1.3em;
+  }
+
+  p.big-text {
+    font-size: 2em;
+  }
+
+  #big-wrapper > p:nth-child(2) {
+    font-size: 1.3em;
+  }
 }
