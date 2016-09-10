@@ -2,58 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>/property-crimes/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/property-crimes/</loc>
     </url>
     
     <url>
-        <loc>/economic-crimes/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/economic-crimes/</loc>
     </url>
     
     <url>
-        <loc>/violent-crimes/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/violent-crimes/</loc>
     </url>
     
     <url>
-        <loc>/women-crimes/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/women-crimes/</loc>
     </url>
     
     <url>
-        <loc>/sitemap.xml</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>/references/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/references/</loc>
     </url>
     
     <url>
-        <loc>/city-list/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/city-list/</loc>
     </url>
     
     <url>
-        <loc>/stories/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/stories/</loc>
     </url>
     
     <url>
-        <loc>/about/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/about/</loc>
     </url>
     
     <url>
-        <loc>/data/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/data/</loc>
     </url>
     
     <url>
-        <loc>/</loc>
-        <lastmod></lastmod>
+        <loc>https://crime-in-india.github.io/</loc>
     </url>
     
 </urlset>
